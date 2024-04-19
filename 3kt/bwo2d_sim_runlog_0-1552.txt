@@ -1,0 +1,2176 @@
+Working directory: D:\VSimTest\bwo_sim\cyl_test2
+Running input file: bwo2d_sim.pre
+Command is "E:\VSim-10.1.0\Contents\engine\bin\\vorpalser.exe" -dt 6.440502385360523e-12 -sd -d 155 -n 1552 -i "bwo2d_sim.pre"  -o "bwo2d_sim" 
+ 
+--------------------- START ENGINE OUTPUT ----------------
+Device detection found 1 options.
+Licensing Scheme file not found.
+Using Tech-X Licensing Scheme.
+LICENSE MANAGER: Using license file 'C:\ProgramData\Tech-X\VSim10\license.txt'
+LICENSE MANAGER: Working Directory: D:\VSimTest\bwo_sim\cyl_test2\
+LICENSE MANAGER: License valid for package(s)/module(s): VSimBase VSimEM VSimMD VSimPA VSimPD 
+LICENSE MANAGER: License valid for macro(s): DrudeDebyeLorentzDielectric absorbingBox antennas antennasGPU deymittra dielectric dielectricGPU esGridBoundary farFields farFieldsGPU geometry geometryGPU gpuPml mal malGPU mirror originRadiatorPort perfectDispersion pml port scatteringBox scatteringBoxGPU secondOrderDiel specularBox statics yee yeeGPU 
+EULA not found. Skipping user agreement.
+WARNING: pml.mac is deprecated.
+Start-dumps enabled (if dumps active).
+
+TxsDevices::TxsDevices(): MPI not found.
+  commWorldSize = 1
+  commWorldRank = 0
+Will attempt 1 threads.
+
+SSE2 found.
+AVX found.
+AVX2 found.
+8 hardware threads found.
+TxsDevices::TxsDevices(): 8 openmp processes and 8 openmp threads.
+
+TxsDevices::TxsDevices(): compiled with cuda toolkit.
+TxsDevices::TxsDevices(): unable to open cuda driver: Library nvcuda.dll not found.
+NOTE: No compatible GPU found on rank 0.  Cannot use GPU updaters.
+
+VORPAL version 10.1.0 started at 2001-01-26-16:21:01.105.
+VORPAL Subversion revision = 35370
+CMake Subversion revision = 1698
+Built on host type = CYGWIN_NT-10.0-x86_64
+Built on host name = qawin10
+Built with compiler = C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/HostX64/x64/cl.exe  /W3 /GR /EHsc, version = 19.16.27034.0
+Run with command line = E:\VSim-10.1.0\Contents\engine\bin\\vorpalser.exe -dt 6.440502385360523e-12 -sd -d 155 -n 1552 -i bwo2d_sim.pre -o bwo2d_sim
+
+Domain of kind, Domain2D, created at clock time 2001-01-26-16:21:01.290
+
+Domain: verbosity = 64.
+Domain: Dump mode is combo.
+Domain: Particle sorting is on.
+Time step is 6.4405e-12.
+Grid(s): globalGrid.
+Decomp(s): decomp.
+No STRgn(s) present.
+GridBoundary(s): bwoconductor bwoabsorber.
+No GridCurve(s) present.
+MultiField(s): myEmField.
+No EmField(s) present.
+No ComboEmField(s) present.
+ScalarDepositor(s): rhoDep.
+VectorDepositor(s): JDep.
+Species(s): electron.
+No Fluid(s) present.
+No Collision(s) present.
+No UpdateStep(s) present.
+No MonteCarloInteractions(s) present.
+No Ionizer(s) present.
+No ImpactCollider(s) present.
+No Semiconductor(s) present.
+Domain: No SumRhoJ present.
+
+RNGs will be seeded using randomSeed = 1 in a way that depends deterministially on randomSeed and the RNG name
+decomp: Periodic directions: none.
+Grid kind = varCylGrid
+Domain: VpGridInfo name = globalGrid with kind = coordProdGrid.
+Global simulation grid size: [54 27]
+Decomposition:
+ decomp0 = [54]
+ decomp1 = [27]
+
+Variable grid breaks/spacing info
+  idim = 0 -- txsBreaks = -0.02  0.52  
+  idim = 0 -- txsSpacings = 0.01  0.01  
+  idim = 1 -- txsBreaks = 0  0.27  
+  idim = 1 -- txsSpacings = 0.01  0.01  
+
+Grid is globalGrid.
+Global grid:
+  start     length   dx.front    dx.back    numPhys
+  -0.02       0.54       0.01       0.01       54
+      0       0.27       0.01       0.01       27
+Local grid for rank 0:
+  start     length   dx.front    dx.back    numPhys
+  -0.02       0.54       0.01       0.01       54
+      0       0.27       0.01       0.01       27
+
+Variable grids deleted
+
+-------------------------------------
+Grid type is cylindrical: uniform
+-------------------------------------
+
+NOTE: grid type reset
+Grid kind = uniCylGrid
+Domain: VpGridInfo name = globalGrid with kind = coordProdGrid.
+Global simulation grid size: [54 27]
+Decomposition:
+ decomp0 = [54]
+ decomp1 = [27]
+
+Grid is globalGrid.
+Global grid:
+  start     length        dx     numPhys
+  -0.02       0.54      0.01        54
+      0       0.27      0.01        27
+Local grid for rank 0:
+  start     length        dx     numPhys
+  -0.02       0.54      0.01        54
+      0       0.27      0.01        27
+
+Domain: begin setup of fld/ptcl messaging... in the domain
+Domain: messaging set up... in the domain
+Domain: Creating grid boundaries at clock time 2001-01-26-16:21:01.302.
+Domain: Constructing universe    at clock time 2001-01-26-16:21:01.302.
+universe: Calculating in/out function.
+universe: Collecting cut-cell edge data.
+universe: Collecting stair-step data.
+universe: Collecting cut-cell face data.
+universe: Collecting cut-cell volume data.
+Domain: universe initialized     at clock time 2001-01-26-16:21:01.418.
+Domain: Skipping creation of grid boundary, universe, as not constructed or already handled.
+Domain: Setting up grid boundary, bwoconductor, at clock time 2001-01-26-16:21:01.418.
+Domain: grid boundary, bwoconductor, data built at clock time 2001-01-26-16:21:01.425.
+Domain: Setting up grid boundary, bwoabsorber, at clock time 2001-01-26-16:21:01.425.
+Domain: grid boundary, bwoabsorber, data built at clock time 2001-01-26-16:21:01.431.
+Domain: Skipping solvers build for grid boundary, universe, as not constructed or already handled.
+Domain: Skipping initialization of grid boundary, universe, as not constructed or already handled.
+bwoconductor: Calculating in/out function.
+bwoconductor: Collecting cut-cell edge data.
+bwoconductor: Collecting stair-step data.
+bwoconductor: Collecting cut-cell face data.
+bwoconductor: Collecting cut-cell volume data.
+Grid boundary, bwoconductor, initialized in 0 seconds.
+bwoabsorber: Calculating in/out function.
+bwoabsorber: Collecting cut-cell edge data.
+bwoabsorber: Collecting stair-step data.
+bwoabsorber: Collecting cut-cell face data.
+bwoabsorber: Collecting cut-cell volume data.
+Grid boundary, bwoabsorber, initialized in 0 seconds.
+Domain: Grid boundaries created at clock time 2001-01-26-16:21:01.473.
+Domain: txsim reaction process holder built.
+Domain: txsim reaction physics holder built.
+Domain: History holder built.
+Domain: Multifields created.
+Domain: Multifields built.
+Domain: Non-combo EMfields built.
+Domain: Combo EMfields built.
+Setting custom mass of 9.10938e-31 kg for species electron
+Setting custom charge of -1.60218e-19 C for species electron
+No ionizationEnergy specified for species electron though it is species=custom, so setting ionizationEnergy to 0eV. If this species will be used in ionization or recombination reactions, you will want to specify the ionization energy in the species block.
+Domain:  attributes set.
+Domain: Species named electron added.
+Sinks are: cavitysink
+Sources are:
+ mybeam
+
+ Position generator named beamemit set.
+ Velocity generator named  set.
+In position generatorbeamemit the nomMacroPtclsPerAreaStep is computed to be 54924.2, for species, electron.
+Particle source beamemit will emit particles.
+NOTICE: No mask specified, emitting from entire slab emitSurface specified in position generator 
+NOTICE: For position generator, beamemit, ptclsPerCell not specified.  Taking from owning species.
+relMacroDenFunc not found in xvLoaderEmitter mybeam, assuming constant value of 1.
+relMacroFluxFunc found and set in xvLoaderEmitter mybeam
+MultiFields built.
+Building species electron with NDIM = 2.
+Added sink, cavitysink, to grid boundary bwoconductor.
+Sources (for buildSolvers) are:
+ mybeam
+
+Source named mybeam added to Species electron.
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+Source, mybeam, loaded 0 particles on this processor (rank 0)
+Domain: electron initialized.
+Domain: All species initialized.
+Domain: All emfluids initialized.
+Domain: All collisions initialized.
+Domain: All ionization processes initialized.
+Domain: All impactCollision processes initialized.
+All semiconductor materials initialized.
+All monteCarloHandlers initialized.
+Initializing 'rho' with 0 setters.
+Initializing 'edgeE' with 0 setters.
+Initializing 'faceB' with 0 setters.
+Initializing 'edgeJ' with 0 setters.
+Initializing 'J' with 0 setters.
+Initializing 'nodalE' with 0 setters.
+Initializing 'nodalB' with 0 setters.
+Domain: All MultiFields initialized at clock tim 2001-01-26-16:21:01.831.
+Domain: All emfields initialized at clock time 2001-01-26-16:21:01.831.
+Domain: Histories initialized at clock time 2001-01-26-16:21:01.849.
+Domain: Initialization complete at clock time 2001-01-26-16:21:01.849.
+
+Domain: Starting dump 0 at time step 0 and clock, 2001-01-26-16:21:01.850.
+Globals dumped at 2001-01-26-16:21:01.964.
+Dumping grid boundaries at 2001-01-26-16:21:01.964.
+Dumping universe at clock time 2001-01-26-16:21:01.964.
+universe dumped  at clock time 2001-01-26-16:21:02.024.
+Dumping bwoconductor at clock time 2001-01-26-16:21:02.024.
+bwoconductor dumped  at clock time 2001-01-26-16:21:02.056.
+Dumping bwoabsorber at clock time 2001-01-26-16:21:02.056.
+bwoabsorber dumped  at clock time 2001-01-26-16:21:02.075.
+Dumped grid boundaries at 2001-01-26-16:21:02.075.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:02.079.
+Domain: Histories dumped at 2001-01-26-16:21:02.079.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:02.081.
+Dumping rho at 2001-01-26-16:21:02.081.
+Dumped rho at 2001-01-26-16:21:02.093.
+Dumping edgeE at 2001-01-26-16:21:02.094.
+Dumped edgeE at 2001-01-26-16:21:02.102.
+Dumping faceB at 2001-01-26-16:21:02.102.
+Dumped faceB at 2001-01-26-16:21:02.110.
+Dumping edgeJ at 2001-01-26-16:21:02.110.
+Dumped edgeJ at 2001-01-26-16:21:02.117.
+Dumping J at 2001-01-26-16:21:02.117.
+Dumped J at 2001-01-26-16:21:02.125.
+All multiFields dumped at 2001-01-26-16:21:02.143.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 0 completed at 2001-01-26-16:21:02.146.
+
+Main loop started    at clock time 2001-01-26-16:21:02.147.
+Taking step        1 to t =  6.440502e-12 at 2001-01-26-16:21:02.147.
+Rank 0 processed a total of 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Sorting particles
+Sorting time: 0.0000000 per particle, 0.0000000 total
+Rank 0 processed a total of 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Taking step        2 to t =  1.288100e-11 at 2001-01-26-16:21:02.177.
+Rank 0 processed a total of 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Taking step        3 to t =  1.932151e-11 at 2001-01-26-16:21:02.184.
+Taking step        4 to t =  2.576201e-11 at 2001-01-26-16:21:02.190.
+Taking step        5 to t =  3.220251e-11 at 2001-01-26-16:21:02.196.
+Taking step        6 to t =  3.864301e-11 at 2001-01-26-16:21:02.203.
+Taking step        7 to t =  4.508352e-11 at 2001-01-26-16:21:02.209.
+Taking step        8 to t =  5.152402e-11 at 2001-01-26-16:21:02.216.
+Taking step        9 to t =  5.796452e-11 at 2001-01-26-16:21:02.222.
+Taking step       10 to t =  6.440502e-11 at 2001-01-26-16:21:02.230.
+Taking step       11 to t =  7.084553e-11 at 2001-01-26-16:21:02.237.
+Taking step       12 to t =  7.728603e-11 at 2001-01-26-16:21:02.243.
+Taking step       13 to t =  8.372653e-11 at 2001-01-26-16:21:02.250.
+Taking step       14 to t =  9.016703e-11 at 2001-01-26-16:21:02.257.
+Taking step       15 to t =  9.660754e-11 at 2001-01-26-16:21:02.263.
+Taking step       16 to t =  1.030480e-10 at 2001-01-26-16:21:02.270.
+Taking step       17 to t =  1.094885e-10 at 2001-01-26-16:21:02.277.
+Taking step       18 to t =  1.159290e-10 at 2001-01-26-16:21:02.284.
+Taking step       19 to t =  1.223695e-10 at 2001-01-26-16:21:02.291.
+Taking step       20 to t =  1.288100e-10 at 2001-01-26-16:21:02.298.
+Taking step       21 to t =  1.352506e-10 at 2001-01-26-16:21:02.306.
+Taking step       22 to t =  1.416911e-10 at 2001-01-26-16:21:02.313.
+Taking step       23 to t =  1.481316e-10 at 2001-01-26-16:21:02.321.
+Taking step       24 to t =  1.545721e-10 at 2001-01-26-16:21:02.328.
+Taking step       25 to t =  1.610126e-10 at 2001-01-26-16:21:02.335.
+Taking step       26 to t =  1.674531e-10 at 2001-01-26-16:21:02.342.
+Taking step       27 to t =  1.738936e-10 at 2001-01-26-16:21:02.349.
+Taking step       28 to t =  1.803341e-10 at 2001-01-26-16:21:02.356.
+Taking step       29 to t =  1.867746e-10 at 2001-01-26-16:21:02.363.
+Taking step       30 to t =  1.932151e-10 at 2001-01-26-16:21:02.370.
+Taking step       31 to t =  1.996556e-10 at 2001-01-26-16:21:02.377.
+Taking step       32 to t =  2.060961e-10 at 2001-01-26-16:21:02.384.
+Taking step       33 to t =  2.125366e-10 at 2001-01-26-16:21:02.391.
+Taking step       34 to t =  2.189771e-10 at 2001-01-26-16:21:02.398.
+Taking step       35 to t =  2.254176e-10 at 2001-01-26-16:21:02.405.
+Taking step       36 to t =  2.318581e-10 at 2001-01-26-16:21:02.412.
+Taking step       37 to t =  2.382986e-10 at 2001-01-26-16:21:02.419.
+Taking step       38 to t =  2.447391e-10 at 2001-01-26-16:21:02.426.
+Taking step       39 to t =  2.511796e-10 at 2001-01-26-16:21:02.433.
+Taking step       40 to t =  2.576201e-10 at 2001-01-26-16:21:02.440.
+Taking step       41 to t =  2.640606e-10 at 2001-01-26-16:21:02.447.
+Taking step       42 to t =  2.705011e-10 at 2001-01-26-16:21:02.454.
+Taking step       43 to t =  2.769416e-10 at 2001-01-26-16:21:02.462.
+Taking step       44 to t =  2.833821e-10 at 2001-01-26-16:21:02.469.
+Taking step       45 to t =  2.898226e-10 at 2001-01-26-16:21:02.477.
+Taking step       46 to t =  2.962631e-10 at 2001-01-26-16:21:02.500.
+Taking step       47 to t =  3.027036e-10 at 2001-01-26-16:21:02.508.
+Taking step       48 to t =  3.091441e-10 at 2001-01-26-16:21:02.515.
+Taking step       49 to t =  3.155846e-10 at 2001-01-26-16:21:02.524.
+Taking step       50 to t =  3.220251e-10 at 2001-01-26-16:21:02.531.
+Taking step       51 to t =  3.284656e-10 at 2001-01-26-16:21:02.539.
+Taking step       52 to t =  3.349061e-10 at 2001-01-26-16:21:02.546.
+Taking step       53 to t =  3.413466e-10 at 2001-01-26-16:21:02.554.
+Taking step       54 to t =  3.477871e-10 at 2001-01-26-16:21:02.561.
+Taking step       55 to t =  3.542276e-10 at 2001-01-26-16:21:02.568.
+Taking step       56 to t =  3.606681e-10 at 2001-01-26-16:21:02.576.
+Taking step       57 to t =  3.671086e-10 at 2001-01-26-16:21:02.583.
+Taking step       58 to t =  3.735491e-10 at 2001-01-26-16:21:02.591.
+Taking step       59 to t =  3.799896e-10 at 2001-01-26-16:21:02.599.
+Taking step       60 to t =  3.864301e-10 at 2001-01-26-16:21:02.607.
+Taking step       61 to t =  3.928706e-10 at 2001-01-26-16:21:02.615.
+Taking step       62 to t =  3.993111e-10 at 2001-01-26-16:21:02.623.
+Taking step       63 to t =  4.057517e-10 at 2001-01-26-16:21:02.633.
+Taking step       64 to t =  4.121922e-10 at 2001-01-26-16:21:02.642.
+Taking step       65 to t =  4.186327e-10 at 2001-01-26-16:21:02.651.
+Taking step       66 to t =  4.250732e-10 at 2001-01-26-16:21:02.662.
+Taking step       67 to t =  4.315137e-10 at 2001-01-26-16:21:02.672.
+Taking step       68 to t =  4.379542e-10 at 2001-01-26-16:21:02.684.
+Taking step       69 to t =  4.443947e-10 at 2001-01-26-16:21:02.697.
+Taking step       70 to t =  4.508352e-10 at 2001-01-26-16:21:02.711.
+Taking step       71 to t =  4.572757e-10 at 2001-01-26-16:21:02.727.
+Taking step       72 to t =  4.637162e-10 at 2001-01-26-16:21:02.743.
+Taking step       73 to t =  4.701567e-10 at 2001-01-26-16:21:02.760.
+Taking step       74 to t =  4.765972e-10 at 2001-01-26-16:21:02.781.
+Taking step       75 to t =  4.830377e-10 at 2001-01-26-16:21:02.800.
+Taking step       76 to t =  4.894782e-10 at 2001-01-26-16:21:02.821.
+Taking step       77 to t =  4.959187e-10 at 2001-01-26-16:21:02.845.
+Taking step       78 to t =  5.023592e-10 at 2001-01-26-16:21:02.870.
+Taking step       79 to t =  5.087997e-10 at 2001-01-26-16:21:02.895.
+Taking step       80 to t =  5.152402e-10 at 2001-01-26-16:21:02.922.
+Taking step       81 to t =  5.216807e-10 at 2001-01-26-16:21:02.950.
+Taking step       82 to t =  5.281212e-10 at 2001-01-26-16:21:02.980.
+Taking step       83 to t =  5.345617e-10 at 2001-01-26-16:21:03.011.
+Taking step       84 to t =  5.410022e-10 at 2001-01-26-16:21:03.042.
+Taking step       85 to t =  5.474427e-10 at 2001-01-26-16:21:03.075.
+Taking step       86 to t =  5.538832e-10 at 2001-01-26-16:21:03.108.
+Taking step       87 to t =  5.603237e-10 at 2001-01-26-16:21:03.142.
+Taking step       88 to t =  5.667642e-10 at 2001-01-26-16:21:03.175.
+Taking step       89 to t =  5.732047e-10 at 2001-01-26-16:21:03.208.
+Taking step       90 to t =  5.796452e-10 at 2001-01-26-16:21:03.242.
+Taking step       91 to t =  5.860857e-10 at 2001-01-26-16:21:03.276.
+Taking step       92 to t =  5.925262e-10 at 2001-01-26-16:21:03.310.
+Taking step       93 to t =  5.989667e-10 at 2001-01-26-16:21:03.344.
+Taking step       94 to t =  6.054072e-10 at 2001-01-26-16:21:03.380.
+Taking step       95 to t =  6.118477e-10 at 2001-01-26-16:21:03.415.
+Taking step       96 to t =  6.182882e-10 at 2001-01-26-16:21:03.449.
+Taking step       97 to t =  6.247287e-10 at 2001-01-26-16:21:03.484.
+Taking step       98 to t =  6.311692e-10 at 2001-01-26-16:21:03.520.
+Taking step       99 to t =  6.376097e-10 at 2001-01-26-16:21:03.555.
+Taking step      100 to t =  6.440502e-10 at 2001-01-26-16:21:03.589.
+Taking step      101 to t =  6.504907e-10 at 2001-01-26-16:21:03.625.
+Taking step      102 to t =  6.569312e-10 at 2001-01-26-16:21:03.659.
+Taking step      103 to t =  6.633717e-10 at 2001-01-26-16:21:03.694.
+Taking step      104 to t =  6.698122e-10 at 2001-01-26-16:21:03.730.
+Taking step      105 to t =  6.762528e-10 at 2001-01-26-16:21:03.764.
+Taking step      106 to t =  6.826933e-10 at 2001-01-26-16:21:03.801.
+Taking step      107 to t =  6.891338e-10 at 2001-01-26-16:21:03.836.
+Taking step      108 to t =  6.955743e-10 at 2001-01-26-16:21:03.871.
+Taking step      109 to t =  7.020148e-10 at 2001-01-26-16:21:03.907.
+Taking step      110 to t =  7.084553e-10 at 2001-01-26-16:21:03.943.
+Taking step      111 to t =  7.148958e-10 at 2001-01-26-16:21:03.979.
+Taking step      112 to t =  7.213363e-10 at 2001-01-26-16:21:04.014.
+Taking step      113 to t =  7.277768e-10 at 2001-01-26-16:21:04.050.
+Taking step      114 to t =  7.342173e-10 at 2001-01-26-16:21:04.085.
+Taking step      115 to t =  7.406578e-10 at 2001-01-26-16:21:04.120.
+Taking step      116 to t =  7.470983e-10 at 2001-01-26-16:21:04.155.
+Taking step      117 to t =  7.535388e-10 at 2001-01-26-16:21:04.189.
+Taking step      118 to t =  7.599793e-10 at 2001-01-26-16:21:04.224.
+Taking step      119 to t =  7.664198e-10 at 2001-01-26-16:21:04.258.
+Taking step      120 to t =  7.728603e-10 at 2001-01-26-16:21:04.293.
+Taking step      121 to t =  7.793008e-10 at 2001-01-26-16:21:04.327.
+Taking step      122 to t =  7.857413e-10 at 2001-01-26-16:21:04.362.
+Taking step      123 to t =  7.921818e-10 at 2001-01-26-16:21:04.397.
+Taking step      124 to t =  7.986223e-10 at 2001-01-26-16:21:04.433.
+Taking step      125 to t =  8.050628e-10 at 2001-01-26-16:21:04.468.
+Taking step      126 to t =  8.115033e-10 at 2001-01-26-16:21:04.504.
+Taking step      127 to t =  8.179438e-10 at 2001-01-26-16:21:04.540.
+Taking step      128 to t =  8.243843e-10 at 2001-01-26-16:21:04.577.
+Taking step      129 to t =  8.308248e-10 at 2001-01-26-16:21:04.614.
+Taking step      130 to t =  8.372653e-10 at 2001-01-26-16:21:04.650.
+Taking step      131 to t =  8.437058e-10 at 2001-01-26-16:21:04.687.
+Taking step      132 to t =  8.501463e-10 at 2001-01-26-16:21:04.723.
+Taking step      133 to t =  8.565868e-10 at 2001-01-26-16:21:04.759.
+Taking step      134 to t =  8.630273e-10 at 2001-01-26-16:21:04.794.
+Taking step      135 to t =  8.694678e-10 at 2001-01-26-16:21:04.831.
+Taking step      136 to t =  8.759083e-10 at 2001-01-26-16:21:04.867.
+Taking step      137 to t =  8.823488e-10 at 2001-01-26-16:21:04.904.
+Taking step      138 to t =  8.887893e-10 at 2001-01-26-16:21:04.939.
+Taking step      139 to t =  8.952298e-10 at 2001-01-26-16:21:04.973.
+Taking step      140 to t =  9.016703e-10 at 2001-01-26-16:21:05.009.
+Taking step      141 to t =  9.081108e-10 at 2001-01-26-16:21:05.045.
+Taking step      142 to t =  9.145513e-10 at 2001-01-26-16:21:05.079.
+Taking step      143 to t =  9.209918e-10 at 2001-01-26-16:21:05.114.
+Taking step      144 to t =  9.274323e-10 at 2001-01-26-16:21:05.150.
+Taking step      145 to t =  9.338728e-10 at 2001-01-26-16:21:05.185.
+Taking step      146 to t =  9.403133e-10 at 2001-01-26-16:21:05.221.
+Taking step      147 to t =  9.467539e-10 at 2001-01-26-16:21:05.256.
+Taking step      148 to t =  9.531944e-10 at 2001-01-26-16:21:05.291.
+Taking step      149 to t =  9.596349e-10 at 2001-01-26-16:21:05.338.
+Taking step      150 to t =  9.660754e-10 at 2001-01-26-16:21:05.376.
+Taking step      151 to t =  9.725159e-10 at 2001-01-26-16:21:05.413.
+Taking step      152 to t =  9.789564e-10 at 2001-01-26-16:21:05.449.
+Taking step      153 to t =  9.853969e-10 at 2001-01-26-16:21:05.485.
+Taking step      154 to t =  9.918374e-10 at 2001-01-26-16:21:05.524.
+Taking step      155 to t =  9.982779e-10 at 2001-01-26-16:21:05.560.
+
+Domain: Starting dump 1 at time step 155 and clock, 2001-01-26-16:21:05.596.
+Globals dumped at 2001-01-26-16:21:05.602.
+Dumping grid boundaries at 2001-01-26-16:21:05.602.
+Dumped grid boundaries at 2001-01-26-16:21:05.602.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:05.613.
+Domain: Histories dumped at 2001-01-26-16:21:05.691.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:05.691.
+Dumping rho at 2001-01-26-16:21:05.691.
+Dumped rho at 2001-01-26-16:21:05.696.
+Dumping edgeE at 2001-01-26-16:21:05.696.
+Dumped edgeE at 2001-01-26-16:21:05.700.
+Dumping faceB at 2001-01-26-16:21:05.700.
+Dumped faceB at 2001-01-26-16:21:05.705.
+Dumping edgeJ at 2001-01-26-16:21:05.705.
+Dumped edgeJ at 2001-01-26-16:21:05.709.
+Dumping J at 2001-01-26-16:21:05.709.
+Dumped J at 2001-01-26-16:21:05.714.
+All multiFields dumped at 2001-01-26-16:21:05.719.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 1 completed at 2001-01-26-16:21:05.722.
+
+Taking step      156 to t =  1.004718e-09 at 2001-01-26-16:21:05.722.
+Taking step      157 to t =  1.011159e-09 at 2001-01-26-16:21:05.757.
+Taking step      158 to t =  1.017599e-09 at 2001-01-26-16:21:05.794.
+Taking step      159 to t =  1.024040e-09 at 2001-01-26-16:21:05.830.
+Taking step      160 to t =  1.030480e-09 at 2001-01-26-16:21:05.866.
+Taking step      161 to t =  1.036921e-09 at 2001-01-26-16:21:05.901.
+Taking step      162 to t =  1.043361e-09 at 2001-01-26-16:21:05.937.
+Taking step      163 to t =  1.049802e-09 at 2001-01-26-16:21:05.971.
+Taking step      164 to t =  1.056242e-09 at 2001-01-26-16:21:06.008.
+Taking step      165 to t =  1.062683e-09 at 2001-01-26-16:21:06.046.
+Taking step      166 to t =  1.069123e-09 at 2001-01-26-16:21:06.085.
+Taking step      167 to t =  1.075564e-09 at 2001-01-26-16:21:06.123.
+Taking step      168 to t =  1.082004e-09 at 2001-01-26-16:21:06.172.
+Taking step      169 to t =  1.088445e-09 at 2001-01-26-16:21:06.214.
+Taking step      170 to t =  1.094885e-09 at 2001-01-26-16:21:06.250.
+Taking step      171 to t =  1.101326e-09 at 2001-01-26-16:21:06.286.
+Taking step      172 to t =  1.107766e-09 at 2001-01-26-16:21:06.323.
+Taking step      173 to t =  1.114207e-09 at 2001-01-26-16:21:06.358.
+Taking step      174 to t =  1.120647e-09 at 2001-01-26-16:21:06.394.
+Taking step      175 to t =  1.127088e-09 at 2001-01-26-16:21:06.431.
+Taking step      176 to t =  1.133528e-09 at 2001-01-26-16:21:06.466.
+Taking step      177 to t =  1.139969e-09 at 2001-01-26-16:21:06.502.
+Taking step      178 to t =  1.146409e-09 at 2001-01-26-16:21:06.536.
+Taking step      179 to t =  1.152850e-09 at 2001-01-26-16:21:06.572.
+Taking step      180 to t =  1.159290e-09 at 2001-01-26-16:21:06.609.
+Taking step      181 to t =  1.165731e-09 at 2001-01-26-16:21:06.645.
+Taking step      182 to t =  1.172171e-09 at 2001-01-26-16:21:06.681.
+Taking step      183 to t =  1.178612e-09 at 2001-01-26-16:21:06.717.
+Taking step      184 to t =  1.185052e-09 at 2001-01-26-16:21:06.752.
+Taking step      185 to t =  1.191493e-09 at 2001-01-26-16:21:06.790.
+Taking step      186 to t =  1.197933e-09 at 2001-01-26-16:21:06.825.
+Taking step      187 to t =  1.204374e-09 at 2001-01-26-16:21:06.860.
+Taking step      188 to t =  1.210814e-09 at 2001-01-26-16:21:06.900.
+Taking step      189 to t =  1.217255e-09 at 2001-01-26-16:21:06.935.
+Taking step      190 to t =  1.223695e-09 at 2001-01-26-16:21:06.971.
+Taking step      191 to t =  1.230136e-09 at 2001-01-26-16:21:07.006.
+Taking step      192 to t =  1.236576e-09 at 2001-01-26-16:21:07.041.
+Taking step      193 to t =  1.243017e-09 at 2001-01-26-16:21:07.077.
+Taking step      194 to t =  1.249457e-09 at 2001-01-26-16:21:07.113.
+Taking step      195 to t =  1.255898e-09 at 2001-01-26-16:21:07.148.
+Taking step      196 to t =  1.262338e-09 at 2001-01-26-16:21:07.185.
+Taking step      197 to t =  1.268779e-09 at 2001-01-26-16:21:07.220.
+Taking step      198 to t =  1.275219e-09 at 2001-01-26-16:21:07.255.
+Taking step      199 to t =  1.281660e-09 at 2001-01-26-16:21:07.293.
+Taking step      200 to t =  1.288100e-09 at 2001-01-26-16:21:07.331.
+Taking step      201 to t =  1.294541e-09 at 2001-01-26-16:21:07.369.
+Taking step      202 to t =  1.300981e-09 at 2001-01-26-16:21:07.406.
+Taking step      203 to t =  1.307422e-09 at 2001-01-26-16:21:07.443.
+Taking step      204 to t =  1.313862e-09 at 2001-01-26-16:21:07.480.
+Taking step      205 to t =  1.320303e-09 at 2001-01-26-16:21:07.516.
+Taking step      206 to t =  1.326743e-09 at 2001-01-26-16:21:07.552.
+Taking step      207 to t =  1.333184e-09 at 2001-01-26-16:21:07.588.
+Taking step      208 to t =  1.339624e-09 at 2001-01-26-16:21:07.624.
+Taking step      209 to t =  1.346065e-09 at 2001-01-26-16:21:07.660.
+Taking step      210 to t =  1.352506e-09 at 2001-01-26-16:21:07.695.
+Taking step      211 to t =  1.358946e-09 at 2001-01-26-16:21:07.731.
+Taking step      212 to t =  1.365387e-09 at 2001-01-26-16:21:07.766.
+Taking step      213 to t =  1.371827e-09 at 2001-01-26-16:21:07.801.
+Taking step      214 to t =  1.378268e-09 at 2001-01-26-16:21:07.836.
+Taking step      215 to t =  1.384708e-09 at 2001-01-26-16:21:07.872.
+Taking step      216 to t =  1.391149e-09 at 2001-01-26-16:21:07.908.
+Taking step      217 to t =  1.397589e-09 at 2001-01-26-16:21:07.943.
+Taking step      218 to t =  1.404030e-09 at 2001-01-26-16:21:07.981.
+Taking step      219 to t =  1.410470e-09 at 2001-01-26-16:21:08.020.
+Taking step      220 to t =  1.416911e-09 at 2001-01-26-16:21:08.056.
+Taking step      221 to t =  1.423351e-09 at 2001-01-26-16:21:08.093.
+Taking step      222 to t =  1.429792e-09 at 2001-01-26-16:21:08.128.
+Taking step      223 to t =  1.436232e-09 at 2001-01-26-16:21:08.163.
+Taking step      224 to t =  1.442673e-09 at 2001-01-26-16:21:08.200.
+Taking step      225 to t =  1.449113e-09 at 2001-01-26-16:21:08.236.
+Taking step      226 to t =  1.455554e-09 at 2001-01-26-16:21:08.271.
+Taking step      227 to t =  1.461994e-09 at 2001-01-26-16:21:08.306.
+Taking step      228 to t =  1.468435e-09 at 2001-01-26-16:21:08.342.
+Taking step      229 to t =  1.474875e-09 at 2001-01-26-16:21:08.377.
+Taking step      230 to t =  1.481316e-09 at 2001-01-26-16:21:08.414.
+Taking step      231 to t =  1.487756e-09 at 2001-01-26-16:21:08.449.
+Taking step      232 to t =  1.494197e-09 at 2001-01-26-16:21:08.485.
+Taking step      233 to t =  1.500637e-09 at 2001-01-26-16:21:08.521.
+Taking step      234 to t =  1.507078e-09 at 2001-01-26-16:21:08.556.
+Taking step      235 to t =  1.513518e-09 at 2001-01-26-16:21:08.591.
+Taking step      236 to t =  1.519959e-09 at 2001-01-26-16:21:08.626.
+Taking step      237 to t =  1.526399e-09 at 2001-01-26-16:21:08.662.
+Taking step      238 to t =  1.532840e-09 at 2001-01-26-16:21:08.700.
+Taking step      239 to t =  1.539280e-09 at 2001-01-26-16:21:08.737.
+Taking step      240 to t =  1.545721e-09 at 2001-01-26-16:21:08.772.
+Taking step      241 to t =  1.552161e-09 at 2001-01-26-16:21:08.807.
+Taking step      242 to t =  1.558602e-09 at 2001-01-26-16:21:08.844.
+Taking step      243 to t =  1.565042e-09 at 2001-01-26-16:21:08.879.
+Taking step      244 to t =  1.571483e-09 at 2001-01-26-16:21:08.916.
+Taking step      245 to t =  1.577923e-09 at 2001-01-26-16:21:08.953.
+Taking step      246 to t =  1.584364e-09 at 2001-01-26-16:21:08.989.
+Taking step      247 to t =  1.590804e-09 at 2001-01-26-16:21:09.024.
+Taking step      248 to t =  1.597245e-09 at 2001-01-26-16:21:09.059.
+Taking step      249 to t =  1.603685e-09 at 2001-01-26-16:21:09.095.
+Taking step      250 to t =  1.610126e-09 at 2001-01-26-16:21:09.131.
+Taking step      251 to t =  1.616566e-09 at 2001-01-26-16:21:09.168.
+Taking step      252 to t =  1.623007e-09 at 2001-01-26-16:21:09.204.
+Taking step      253 to t =  1.629447e-09 at 2001-01-26-16:21:09.241.
+Taking step      254 to t =  1.635888e-09 at 2001-01-26-16:21:09.276.
+Taking step      255 to t =  1.642328e-09 at 2001-01-26-16:21:09.312.
+Taking step      256 to t =  1.648769e-09 at 2001-01-26-16:21:09.348.
+Taking step      257 to t =  1.655209e-09 at 2001-01-26-16:21:09.384.
+Taking step      258 to t =  1.661650e-09 at 2001-01-26-16:21:09.422.
+Taking step      259 to t =  1.668090e-09 at 2001-01-26-16:21:09.458.
+Taking step      260 to t =  1.674531e-09 at 2001-01-26-16:21:09.494.
+Taking step      261 to t =  1.680971e-09 at 2001-01-26-16:21:09.530.
+Taking step      262 to t =  1.687412e-09 at 2001-01-26-16:21:09.567.
+Taking step      263 to t =  1.693852e-09 at 2001-01-26-16:21:09.603.
+Taking step      264 to t =  1.700293e-09 at 2001-01-26-16:21:09.639.
+Taking step      265 to t =  1.706733e-09 at 2001-01-26-16:21:09.674.
+Taking step      266 to t =  1.713174e-09 at 2001-01-26-16:21:09.710.
+Taking step      267 to t =  1.719614e-09 at 2001-01-26-16:21:09.748.
+Taking step      268 to t =  1.726055e-09 at 2001-01-26-16:21:09.785.
+Taking step      269 to t =  1.732495e-09 at 2001-01-26-16:21:09.821.
+Taking step      270 to t =  1.738936e-09 at 2001-01-26-16:21:09.857.
+Taking step      271 to t =  1.745376e-09 at 2001-01-26-16:21:09.894.
+Taking step      272 to t =  1.751817e-09 at 2001-01-26-16:21:09.931.
+Taking step      273 to t =  1.758257e-09 at 2001-01-26-16:21:09.970.
+Taking step      274 to t =  1.764698e-09 at 2001-01-26-16:21:10.007.
+Taking step      275 to t =  1.771138e-09 at 2001-01-26-16:21:10.042.
+Taking step      276 to t =  1.777579e-09 at 2001-01-26-16:21:10.078.
+Taking step      277 to t =  1.784019e-09 at 2001-01-26-16:21:10.113.
+Taking step      278 to t =  1.790460e-09 at 2001-01-26-16:21:10.147.
+Taking step      279 to t =  1.796900e-09 at 2001-01-26-16:21:10.182.
+Taking step      280 to t =  1.803341e-09 at 2001-01-26-16:21:10.218.
+Taking step      281 to t =  1.809781e-09 at 2001-01-26-16:21:10.254.
+Taking step      282 to t =  1.816222e-09 at 2001-01-26-16:21:10.289.
+Taking step      283 to t =  1.822662e-09 at 2001-01-26-16:21:10.325.
+Taking step      284 to t =  1.829103e-09 at 2001-01-26-16:21:10.361.
+Taking step      285 to t =  1.835543e-09 at 2001-01-26-16:21:10.397.
+Taking step      286 to t =  1.841984e-09 at 2001-01-26-16:21:10.432.
+Taking step      287 to t =  1.848424e-09 at 2001-01-26-16:21:10.469.
+Taking step      288 to t =  1.854865e-09 at 2001-01-26-16:21:10.504.
+Taking step      289 to t =  1.861305e-09 at 2001-01-26-16:21:10.540.
+Taking step      290 to t =  1.867746e-09 at 2001-01-26-16:21:10.576.
+Taking step      291 to t =  1.874186e-09 at 2001-01-26-16:21:10.612.
+Taking step      292 to t =  1.880627e-09 at 2001-01-26-16:21:10.647.
+Taking step      293 to t =  1.887067e-09 at 2001-01-26-16:21:10.682.
+Taking step      294 to t =  1.893508e-09 at 2001-01-26-16:21:10.717.
+Taking step      295 to t =  1.899948e-09 at 2001-01-26-16:21:10.754.
+Taking step      296 to t =  1.906389e-09 at 2001-01-26-16:21:10.789.
+Taking step      297 to t =  1.912829e-09 at 2001-01-26-16:21:10.825.
+Taking step      298 to t =  1.919270e-09 at 2001-01-26-16:21:10.862.
+Taking step      299 to t =  1.925710e-09 at 2001-01-26-16:21:10.897.
+Taking step      300 to t =  1.932151e-09 at 2001-01-26-16:21:10.932.
+Taking step      301 to t =  1.938591e-09 at 2001-01-26-16:21:10.967.
+Taking step      302 to t =  1.945032e-09 at 2001-01-26-16:21:11.004.
+Taking step      303 to t =  1.951472e-09 at 2001-01-26-16:21:11.042.
+Taking step      304 to t =  1.957913e-09 at 2001-01-26-16:21:11.077.
+Taking step      305 to t =  1.964353e-09 at 2001-01-26-16:21:11.113.
+Taking step      306 to t =  1.970794e-09 at 2001-01-26-16:21:11.149.
+Taking step      307 to t =  1.977234e-09 at 2001-01-26-16:21:11.186.
+Taking step      308 to t =  1.983675e-09 at 2001-01-26-16:21:11.222.
+Taking step      309 to t =  1.990115e-09 at 2001-01-26-16:21:11.258.
+Taking step      310 to t =  1.996556e-09 at 2001-01-26-16:21:11.294.
+
+Domain: Starting dump 2 at time step 310 and clock, 2001-01-26-16:21:11.331.
+Globals dumped at 2001-01-26-16:21:11.339.
+Dumping grid boundaries at 2001-01-26-16:21:11.339.
+Dumped grid boundaries at 2001-01-26-16:21:11.339.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:11.352.
+Domain: Histories dumped at 2001-01-26-16:21:11.406.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:11.406.
+Dumping rho at 2001-01-26-16:21:11.406.
+Dumped rho at 2001-01-26-16:21:11.418.
+Dumping edgeE at 2001-01-26-16:21:11.418.
+Dumped edgeE at 2001-01-26-16:21:11.430.
+Dumping faceB at 2001-01-26-16:21:11.430.
+Dumped faceB at 2001-01-26-16:21:11.437.
+Dumping edgeJ at 2001-01-26-16:21:11.437.
+Dumped edgeJ at 2001-01-26-16:21:11.444.
+Dumping J at 2001-01-26-16:21:11.444.
+Dumped J at 2001-01-26-16:21:11.450.
+All multiFields dumped at 2001-01-26-16:21:11.456.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 2 completed at 2001-01-26-16:21:11.461.
+
+Taking step      311 to t =  2.002996e-09 at 2001-01-26-16:21:11.461.
+Taking step      312 to t =  2.009437e-09 at 2001-01-26-16:21:11.497.
+Taking step      313 to t =  2.015877e-09 at 2001-01-26-16:21:11.532.
+Taking step      314 to t =  2.022318e-09 at 2001-01-26-16:21:11.566.
+Taking step      315 to t =  2.028758e-09 at 2001-01-26-16:21:11.601.
+Taking step      316 to t =  2.035199e-09 at 2001-01-26-16:21:11.636.
+Taking step      317 to t =  2.041639e-09 at 2001-01-26-16:21:11.671.
+Taking step      318 to t =  2.048080e-09 at 2001-01-26-16:21:11.706.
+Taking step      319 to t =  2.054520e-09 at 2001-01-26-16:21:11.742.
+Taking step      320 to t =  2.060961e-09 at 2001-01-26-16:21:11.777.
+Taking step      321 to t =  2.067401e-09 at 2001-01-26-16:21:11.812.
+Taking step      322 to t =  2.073842e-09 at 2001-01-26-16:21:11.847.
+Taking step      323 to t =  2.080282e-09 at 2001-01-26-16:21:11.882.
+Taking step      324 to t =  2.086723e-09 at 2001-01-26-16:21:11.917.
+Taking step      325 to t =  2.093163e-09 at 2001-01-26-16:21:11.952.
+Taking step      326 to t =  2.099604e-09 at 2001-01-26-16:21:11.988.
+Taking step      327 to t =  2.106044e-09 at 2001-01-26-16:21:12.026.
+Taking step      328 to t =  2.112485e-09 at 2001-01-26-16:21:12.061.
+Taking step      329 to t =  2.118925e-09 at 2001-01-26-16:21:12.096.
+Taking step      330 to t =  2.125366e-09 at 2001-01-26-16:21:12.131.
+Taking step      331 to t =  2.131806e-09 at 2001-01-26-16:21:12.168.
+Taking step      332 to t =  2.138247e-09 at 2001-01-26-16:21:12.203.
+Taking step      333 to t =  2.144687e-09 at 2001-01-26-16:21:12.239.
+Taking step      334 to t =  2.151128e-09 at 2001-01-26-16:21:12.275.
+Taking step      335 to t =  2.157568e-09 at 2001-01-26-16:21:12.311.
+Taking step      336 to t =  2.164009e-09 at 2001-01-26-16:21:12.347.
+Taking step      337 to t =  2.170449e-09 at 2001-01-26-16:21:12.382.
+Taking step      338 to t =  2.176890e-09 at 2001-01-26-16:21:12.419.
+Taking step      339 to t =  2.183330e-09 at 2001-01-26-16:21:12.456.
+Taking step      340 to t =  2.189771e-09 at 2001-01-26-16:21:12.491.
+Taking step      341 to t =  2.196211e-09 at 2001-01-26-16:21:12.528.
+Taking step      342 to t =  2.202652e-09 at 2001-01-26-16:21:12.563.
+Taking step      343 to t =  2.209092e-09 at 2001-01-26-16:21:12.600.
+Taking step      344 to t =  2.215533e-09 at 2001-01-26-16:21:12.636.
+Taking step      345 to t =  2.221973e-09 at 2001-01-26-16:21:12.672.
+Taking step      346 to t =  2.228414e-09 at 2001-01-26-16:21:12.707.
+Taking step      347 to t =  2.234854e-09 at 2001-01-26-16:21:12.742.
+Taking step      348 to t =  2.241295e-09 at 2001-01-26-16:21:12.778.
+Taking step      349 to t =  2.247735e-09 at 2001-01-26-16:21:12.813.
+Taking step      350 to t =  2.254176e-09 at 2001-01-26-16:21:12.848.
+Taking step      351 to t =  2.260616e-09 at 2001-01-26-16:21:12.882.
+Taking step      352 to t =  2.267057e-09 at 2001-01-26-16:21:12.918.
+Taking step      353 to t =  2.273497e-09 at 2001-01-26-16:21:12.953.
+Taking step      354 to t =  2.279938e-09 at 2001-01-26-16:21:12.987.
+Taking step      355 to t =  2.286378e-09 at 2001-01-26-16:21:13.024.
+Taking step      356 to t =  2.292819e-09 at 2001-01-26-16:21:13.060.
+Taking step      357 to t =  2.299259e-09 at 2001-01-26-16:21:13.095.
+Taking step      358 to t =  2.305700e-09 at 2001-01-26-16:21:13.132.
+Taking step      359 to t =  2.312140e-09 at 2001-01-26-16:21:13.169.
+Taking step      360 to t =  2.318581e-09 at 2001-01-26-16:21:13.205.
+Taking step      361 to t =  2.325021e-09 at 2001-01-26-16:21:13.243.
+Taking step      362 to t =  2.331462e-09 at 2001-01-26-16:21:13.278.
+Taking step      363 to t =  2.337902e-09 at 2001-01-26-16:21:13.313.
+Taking step      364 to t =  2.344343e-09 at 2001-01-26-16:21:13.348.
+Taking step      365 to t =  2.350783e-09 at 2001-01-26-16:21:13.384.
+Taking step      366 to t =  2.357224e-09 at 2001-01-26-16:21:13.419.
+Taking step      367 to t =  2.363664e-09 at 2001-01-26-16:21:13.455.
+Taking step      368 to t =  2.370105e-09 at 2001-01-26-16:21:13.490.
+Taking step      369 to t =  2.376545e-09 at 2001-01-26-16:21:13.525.
+Taking step      370 to t =  2.382986e-09 at 2001-01-26-16:21:13.560.
+Taking step      371 to t =  2.389426e-09 at 2001-01-26-16:21:13.595.
+Taking step      372 to t =  2.395867e-09 at 2001-01-26-16:21:13.630.
+Taking step      373 to t =  2.402307e-09 at 2001-01-26-16:21:13.664.
+Taking step      374 to t =  2.408748e-09 at 2001-01-26-16:21:13.699.
+Taking step      375 to t =  2.415188e-09 at 2001-01-26-16:21:13.734.
+Taking step      376 to t =  2.421629e-09 at 2001-01-26-16:21:13.769.
+Taking step      377 to t =  2.428069e-09 at 2001-01-26-16:21:13.805.
+Taking step      378 to t =  2.434510e-09 at 2001-01-26-16:21:13.840.
+Taking step      379 to t =  2.440950e-09 at 2001-01-26-16:21:13.874.
+Taking step      380 to t =  2.447391e-09 at 2001-01-26-16:21:13.910.
+Taking step      381 to t =  2.453831e-09 at 2001-01-26-16:21:13.945.
+Taking step      382 to t =  2.460272e-09 at 2001-01-26-16:21:13.980.
+Taking step      383 to t =  2.466712e-09 at 2001-01-26-16:21:14.014.
+Taking step      384 to t =  2.473153e-09 at 2001-01-26-16:21:14.050.
+Taking step      385 to t =  2.479593e-09 at 2001-01-26-16:21:14.084.
+Taking step      386 to t =  2.486034e-09 at 2001-01-26-16:21:14.118.
+Taking step      387 to t =  2.492474e-09 at 2001-01-26-16:21:14.152.
+Taking step      388 to t =  2.498915e-09 at 2001-01-26-16:21:14.185.
+Taking step      389 to t =  2.505355e-09 at 2001-01-26-16:21:14.220.
+Taking step      390 to t =  2.511796e-09 at 2001-01-26-16:21:14.254.
+Taking step      391 to t =  2.518236e-09 at 2001-01-26-16:21:14.288.
+Taking step      392 to t =  2.524677e-09 at 2001-01-26-16:21:14.324.
+Taking step      393 to t =  2.531117e-09 at 2001-01-26-16:21:14.359.
+Taking step      394 to t =  2.537558e-09 at 2001-01-26-16:21:14.393.
+Taking step      395 to t =  2.543998e-09 at 2001-01-26-16:21:14.428.
+Taking step      396 to t =  2.550439e-09 at 2001-01-26-16:21:14.462.
+Taking step      397 to t =  2.556879e-09 at 2001-01-26-16:21:14.496.
+Taking step      398 to t =  2.563320e-09 at 2001-01-26-16:21:14.530.
+Taking step      399 to t =  2.569760e-09 at 2001-01-26-16:21:14.565.
+Taking step      400 to t =  2.576201e-09 at 2001-01-26-16:21:14.599.
+Taking step      401 to t =  2.582641e-09 at 2001-01-26-16:21:14.633.
+Taking step      402 to t =  2.589082e-09 at 2001-01-26-16:21:14.667.
+Taking step      403 to t =  2.595522e-09 at 2001-01-26-16:21:14.701.
+Taking step      404 to t =  2.601963e-09 at 2001-01-26-16:21:14.735.
+Taking step      405 to t =  2.608403e-09 at 2001-01-26-16:21:14.769.
+Taking step      406 to t =  2.614844e-09 at 2001-01-26-16:21:14.803.
+Taking step      407 to t =  2.621284e-09 at 2001-01-26-16:21:14.837.
+Taking step      408 to t =  2.627725e-09 at 2001-01-26-16:21:14.872.
+Taking step      409 to t =  2.634165e-09 at 2001-01-26-16:21:14.906.
+Taking step      410 to t =  2.640606e-09 at 2001-01-26-16:21:14.940.
+Taking step      411 to t =  2.647046e-09 at 2001-01-26-16:21:14.975.
+Taking step      412 to t =  2.653487e-09 at 2001-01-26-16:21:15.009.
+Taking step      413 to t =  2.659927e-09 at 2001-01-26-16:21:15.043.
+Taking step      414 to t =  2.666368e-09 at 2001-01-26-16:21:15.080.
+Taking step      415 to t =  2.672808e-09 at 2001-01-26-16:21:15.114.
+Taking step      416 to t =  2.679249e-09 at 2001-01-26-16:21:15.149.
+Taking step      417 to t =  2.685689e-09 at 2001-01-26-16:21:15.182.
+Taking step      418 to t =  2.692130e-09 at 2001-01-26-16:21:15.216.
+Taking step      419 to t =  2.698570e-09 at 2001-01-26-16:21:15.250.
+Taking step      420 to t =  2.705011e-09 at 2001-01-26-16:21:15.283.
+Taking step      421 to t =  2.711452e-09 at 2001-01-26-16:21:15.319.
+Taking step      422 to t =  2.717892e-09 at 2001-01-26-16:21:15.352.
+Taking step      423 to t =  2.724333e-09 at 2001-01-26-16:21:15.386.
+Taking step      424 to t =  2.730773e-09 at 2001-01-26-16:21:15.419.
+Taking step      425 to t =  2.737214e-09 at 2001-01-26-16:21:15.452.
+Taking step      426 to t =  2.743654e-09 at 2001-01-26-16:21:15.485.
+Taking step      427 to t =  2.750095e-09 at 2001-01-26-16:21:15.519.
+Taking step      428 to t =  2.756535e-09 at 2001-01-26-16:21:15.553.
+Taking step      429 to t =  2.762976e-09 at 2001-01-26-16:21:15.586.
+Taking step      430 to t =  2.769416e-09 at 2001-01-26-16:21:15.619.
+Taking step      431 to t =  2.775857e-09 at 2001-01-26-16:21:15.652.
+Taking step      432 to t =  2.782297e-09 at 2001-01-26-16:21:15.685.
+Taking step      433 to t =  2.788738e-09 at 2001-01-26-16:21:15.717.
+Taking step      434 to t =  2.795178e-09 at 2001-01-26-16:21:15.752.
+Taking step      435 to t =  2.801619e-09 at 2001-01-26-16:21:15.788.
+Taking step      436 to t =  2.808059e-09 at 2001-01-26-16:21:15.822.
+Taking step      437 to t =  2.814500e-09 at 2001-01-26-16:21:15.857.
+Taking step      438 to t =  2.820940e-09 at 2001-01-26-16:21:15.890.
+Taking step      439 to t =  2.827381e-09 at 2001-01-26-16:21:15.923.
+Taking step      440 to t =  2.833821e-09 at 2001-01-26-16:21:15.957.
+Taking step      441 to t =  2.840262e-09 at 2001-01-26-16:21:15.989.
+Taking step      442 to t =  2.846702e-09 at 2001-01-26-16:21:16.022.
+Taking step      443 to t =  2.853143e-09 at 2001-01-26-16:21:16.054.
+Taking step      444 to t =  2.859583e-09 at 2001-01-26-16:21:16.090.
+Taking step      445 to t =  2.866024e-09 at 2001-01-26-16:21:16.123.
+Taking step      446 to t =  2.872464e-09 at 2001-01-26-16:21:16.155.
+Taking step      447 to t =  2.878905e-09 at 2001-01-26-16:21:16.188.
+Taking step      448 to t =  2.885345e-09 at 2001-01-26-16:21:16.221.
+Taking step      449 to t =  2.891786e-09 at 2001-01-26-16:21:16.253.
+Taking step      450 to t =  2.898226e-09 at 2001-01-26-16:21:16.290.
+Taking step      451 to t =  2.904667e-09 at 2001-01-26-16:21:16.325.
+Taking step      452 to t =  2.911107e-09 at 2001-01-26-16:21:16.367.
+Taking step      453 to t =  2.917548e-09 at 2001-01-26-16:21:16.403.
+Taking step      454 to t =  2.923988e-09 at 2001-01-26-16:21:16.437.
+Taking step      455 to t =  2.930429e-09 at 2001-01-26-16:21:16.471.
+Taking step      456 to t =  2.936869e-09 at 2001-01-26-16:21:16.505.
+Taking step      457 to t =  2.943310e-09 at 2001-01-26-16:21:16.538.
+Taking step      458 to t =  2.949750e-09 at 2001-01-26-16:21:16.574.
+Taking step      459 to t =  2.956191e-09 at 2001-01-26-16:21:16.610.
+Taking step      460 to t =  2.962631e-09 at 2001-01-26-16:21:16.645.
+Taking step      461 to t =  2.969072e-09 at 2001-01-26-16:21:16.679.
+Taking step      462 to t =  2.975512e-09 at 2001-01-26-16:21:16.712.
+Taking step      463 to t =  2.981953e-09 at 2001-01-26-16:21:16.747.
+Taking step      464 to t =  2.988393e-09 at 2001-01-26-16:21:16.782.
+Taking step      465 to t =  2.994834e-09 at 2001-01-26-16:21:16.816.
+
+Domain: Starting dump 3 at time step 465 and clock, 2001-01-26-16:21:16.851.
+Globals dumped at 2001-01-26-16:21:16.857.
+Dumping grid boundaries at 2001-01-26-16:21:16.857.
+Dumped grid boundaries at 2001-01-26-16:21:16.857.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:16.869.
+Domain: Histories dumped at 2001-01-26-16:21:16.885.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:16.885.
+Dumping rho at 2001-01-26-16:21:16.885.
+Dumped rho at 2001-01-26-16:21:16.891.
+Dumping edgeE at 2001-01-26-16:21:16.892.
+Dumped edgeE at 2001-01-26-16:21:16.898.
+Dumping faceB at 2001-01-26-16:21:16.898.
+Dumped faceB at 2001-01-26-16:21:16.904.
+Dumping edgeJ at 2001-01-26-16:21:16.904.
+Dumped edgeJ at 2001-01-26-16:21:16.916.
+Dumping J at 2001-01-26-16:21:16.917.
+Dumped J at 2001-01-26-16:21:16.922.
+All multiFields dumped at 2001-01-26-16:21:16.941.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 3 completed at 2001-01-26-16:21:16.945.
+
+Taking step      466 to t =  3.001274e-09 at 2001-01-26-16:21:16.945.
+Taking step      467 to t =  3.007715e-09 at 2001-01-26-16:21:16.981.
+Taking step      468 to t =  3.014155e-09 at 2001-01-26-16:21:17.019.
+Taking step      469 to t =  3.020596e-09 at 2001-01-26-16:21:17.058.
+Taking step      470 to t =  3.027036e-09 at 2001-01-26-16:21:17.096.
+Taking step      471 to t =  3.033477e-09 at 2001-01-26-16:21:17.130.
+Taking step      472 to t =  3.039917e-09 at 2001-01-26-16:21:17.165.
+Taking step      473 to t =  3.046358e-09 at 2001-01-26-16:21:17.199.
+Taking step      474 to t =  3.052798e-09 at 2001-01-26-16:21:17.234.
+Taking step      475 to t =  3.059239e-09 at 2001-01-26-16:21:17.269.
+Taking step      476 to t =  3.065679e-09 at 2001-01-26-16:21:17.303.
+Taking step      477 to t =  3.072120e-09 at 2001-01-26-16:21:17.339.
+Taking step      478 to t =  3.078560e-09 at 2001-01-26-16:21:17.372.
+Taking step      479 to t =  3.085001e-09 at 2001-01-26-16:21:17.404.
+Taking step      480 to t =  3.091441e-09 at 2001-01-26-16:21:17.438.
+Taking step      481 to t =  3.097882e-09 at 2001-01-26-16:21:17.471.
+Taking step      482 to t =  3.104322e-09 at 2001-01-26-16:21:17.505.
+Taking step      483 to t =  3.110763e-09 at 2001-01-26-16:21:17.538.
+Taking step      484 to t =  3.117203e-09 at 2001-01-26-16:21:17.570.
+Taking step      485 to t =  3.123644e-09 at 2001-01-26-16:21:17.603.
+Taking step      486 to t =  3.130084e-09 at 2001-01-26-16:21:17.636.
+Taking step      487 to t =  3.136525e-09 at 2001-01-26-16:21:17.668.
+Taking step      488 to t =  3.142965e-09 at 2001-01-26-16:21:17.701.
+Taking step      489 to t =  3.149406e-09 at 2001-01-26-16:21:17.734.
+Taking step      490 to t =  3.155846e-09 at 2001-01-26-16:21:17.767.
+Taking step      491 to t =  3.162287e-09 at 2001-01-26-16:21:17.799.
+Taking step      492 to t =  3.168727e-09 at 2001-01-26-16:21:17.833.
+Taking step      493 to t =  3.175168e-09 at 2001-01-26-16:21:17.866.
+Taking step      494 to t =  3.181608e-09 at 2001-01-26-16:21:17.898.
+Taking step      495 to t =  3.188049e-09 at 2001-01-26-16:21:17.931.
+Taking step      496 to t =  3.194489e-09 at 2001-01-26-16:21:17.964.
+Taking step      497 to t =  3.200930e-09 at 2001-01-26-16:21:17.996.
+Taking step      498 to t =  3.207370e-09 at 2001-01-26-16:21:18.028.
+Taking step      499 to t =  3.213811e-09 at 2001-01-26-16:21:18.061.
+Taking step      500 to t =  3.220251e-09 at 2001-01-26-16:21:18.093.
+Taking step      501 to t =  3.226692e-09 at 2001-01-26-16:21:18.127.
+Taking step      502 to t =  3.233132e-09 at 2001-01-26-16:21:18.159.
+Taking step      503 to t =  3.239573e-09 at 2001-01-26-16:21:18.191.
+Taking step      504 to t =  3.246013e-09 at 2001-01-26-16:21:18.224.
+Taking step      505 to t =  3.252454e-09 at 2001-01-26-16:21:18.256.
+Taking step      506 to t =  3.258894e-09 at 2001-01-26-16:21:18.288.
+Taking step      507 to t =  3.265335e-09 at 2001-01-26-16:21:18.320.
+Taking step      508 to t =  3.271775e-09 at 2001-01-26-16:21:18.352.
+Taking step      509 to t =  3.278216e-09 at 2001-01-26-16:21:18.384.
+Taking step      510 to t =  3.284656e-09 at 2001-01-26-16:21:18.416.
+Taking step      511 to t =  3.291097e-09 at 2001-01-26-16:21:18.451.
+Taking step      512 to t =  3.297537e-09 at 2001-01-26-16:21:18.487.
+Taking step      513 to t =  3.303978e-09 at 2001-01-26-16:21:18.520.
+Taking step      514 to t =  3.310418e-09 at 2001-01-26-16:21:18.552.
+Taking step      515 to t =  3.316859e-09 at 2001-01-26-16:21:18.584.
+Taking step      516 to t =  3.323299e-09 at 2001-01-26-16:21:18.616.
+Taking step      517 to t =  3.329740e-09 at 2001-01-26-16:21:18.648.
+Taking step      518 to t =  3.336180e-09 at 2001-01-26-16:21:18.680.
+Taking step      519 to t =  3.342621e-09 at 2001-01-26-16:21:18.712.
+Taking step      520 to t =  3.349061e-09 at 2001-01-26-16:21:18.744.
+Taking step      521 to t =  3.355502e-09 at 2001-01-26-16:21:18.775.
+Taking step      522 to t =  3.361942e-09 at 2001-01-26-16:21:18.807.
+Taking step      523 to t =  3.368383e-09 at 2001-01-26-16:21:18.838.
+Taking step      524 to t =  3.374823e-09 at 2001-01-26-16:21:18.870.
+Taking step      525 to t =  3.381264e-09 at 2001-01-26-16:21:18.901.
+Taking step      526 to t =  3.387704e-09 at 2001-01-26-16:21:18.933.
+Taking step      527 to t =  3.394145e-09 at 2001-01-26-16:21:18.965.
+Taking step      528 to t =  3.400585e-09 at 2001-01-26-16:21:18.996.
+Taking step      529 to t =  3.407026e-09 at 2001-01-26-16:21:19.028.
+Taking step      530 to t =  3.413466e-09 at 2001-01-26-16:21:19.060.
+Taking step      531 to t =  3.419907e-09 at 2001-01-26-16:21:19.091.
+Taking step      532 to t =  3.426347e-09 at 2001-01-26-16:21:19.123.
+Taking step      533 to t =  3.432788e-09 at 2001-01-26-16:21:19.157.
+Taking step      534 to t =  3.439228e-09 at 2001-01-26-16:21:19.188.
+Taking step      535 to t =  3.445669e-09 at 2001-01-26-16:21:19.220.
+Taking step      536 to t =  3.452109e-09 at 2001-01-26-16:21:19.251.
+Taking step      537 to t =  3.458550e-09 at 2001-01-26-16:21:19.283.
+Taking step      538 to t =  3.464990e-09 at 2001-01-26-16:21:19.314.
+Taking step      539 to t =  3.471431e-09 at 2001-01-26-16:21:19.348.
+Taking step      540 to t =  3.477871e-09 at 2001-01-26-16:21:19.381.
+Taking step      541 to t =  3.484312e-09 at 2001-01-26-16:21:19.413.
+Taking step      542 to t =  3.490752e-09 at 2001-01-26-16:21:19.444.
+Taking step      543 to t =  3.497193e-09 at 2001-01-26-16:21:19.480.
+Taking step      544 to t =  3.503633e-09 at 2001-01-26-16:21:19.511.
+Taking step      545 to t =  3.510074e-09 at 2001-01-26-16:21:19.543.
+Taking step      546 to t =  3.516514e-09 at 2001-01-26-16:21:19.578.
+Taking step      547 to t =  3.522955e-09 at 2001-01-26-16:21:19.611.
+Taking step      548 to t =  3.529395e-09 at 2001-01-26-16:21:19.646.
+Taking step      549 to t =  3.535836e-09 at 2001-01-26-16:21:19.682.
+Taking step      550 to t =  3.542276e-09 at 2001-01-26-16:21:19.714.
+Taking step      551 to t =  3.548717e-09 at 2001-01-26-16:21:19.749.
+Taking step      552 to t =  3.555157e-09 at 2001-01-26-16:21:19.782.
+Taking step      553 to t =  3.561598e-09 at 2001-01-26-16:21:19.813.
+Taking step      554 to t =  3.568038e-09 at 2001-01-26-16:21:19.845.
+Taking step      555 to t =  3.574479e-09 at 2001-01-26-16:21:19.879.
+Taking step      556 to t =  3.580919e-09 at 2001-01-26-16:21:19.915.
+Taking step      557 to t =  3.587360e-09 at 2001-01-26-16:21:19.950.
+Taking step      558 to t =  3.593800e-09 at 2001-01-26-16:21:19.983.
+Taking step      559 to t =  3.600241e-09 at 2001-01-26-16:21:20.017.
+Taking step      560 to t =  3.606681e-09 at 2001-01-26-16:21:20.050.
+Taking step      561 to t =  3.613122e-09 at 2001-01-26-16:21:20.084.
+Taking step      562 to t =  3.619562e-09 at 2001-01-26-16:21:20.117.
+Taking step      563 to t =  3.626003e-09 at 2001-01-26-16:21:20.153.
+Taking step      564 to t =  3.632443e-09 at 2001-01-26-16:21:20.187.
+Taking step      565 to t =  3.638884e-09 at 2001-01-26-16:21:20.219.
+Taking step      566 to t =  3.645324e-09 at 2001-01-26-16:21:20.251.
+Taking step      567 to t =  3.651765e-09 at 2001-01-26-16:21:20.283.
+Taking step      568 to t =  3.658205e-09 at 2001-01-26-16:21:20.315.
+Taking step      569 to t =  3.664646e-09 at 2001-01-26-16:21:20.347.
+Taking step      570 to t =  3.671086e-09 at 2001-01-26-16:21:20.378.
+Taking step      571 to t =  3.677527e-09 at 2001-01-26-16:21:20.410.
+Taking step      572 to t =  3.683967e-09 at 2001-01-26-16:21:20.443.
+Taking step      573 to t =  3.690408e-09 at 2001-01-26-16:21:20.475.
+Taking step      574 to t =  3.696848e-09 at 2001-01-26-16:21:20.507.
+Taking step      575 to t =  3.703289e-09 at 2001-01-26-16:21:20.538.
+Taking step      576 to t =  3.709729e-09 at 2001-01-26-16:21:20.572.
+Taking step      577 to t =  3.716170e-09 at 2001-01-26-16:21:20.604.
+Taking step      578 to t =  3.722610e-09 at 2001-01-26-16:21:20.635.
+Taking step      579 to t =  3.729051e-09 at 2001-01-26-16:21:20.667.
+Taking step      580 to t =  3.735491e-09 at 2001-01-26-16:21:20.699.
+Taking step      581 to t =  3.741932e-09 at 2001-01-26-16:21:20.730.
+Taking step      582 to t =  3.748372e-09 at 2001-01-26-16:21:20.762.
+Taking step      583 to t =  3.754813e-09 at 2001-01-26-16:21:20.793.
+Taking step      584 to t =  3.761253e-09 at 2001-01-26-16:21:20.825.
+Taking step      585 to t =  3.767694e-09 at 2001-01-26-16:21:20.856.
+Taking step      586 to t =  3.774134e-09 at 2001-01-26-16:21:20.887.
+Taking step      587 to t =  3.780575e-09 at 2001-01-26-16:21:20.918.
+Taking step      588 to t =  3.787015e-09 at 2001-01-26-16:21:20.950.
+Taking step      589 to t =  3.793456e-09 at 2001-01-26-16:21:20.981.
+Taking step      590 to t =  3.799896e-09 at 2001-01-26-16:21:21.013.
+Taking step      591 to t =  3.806337e-09 at 2001-01-26-16:21:21.045.
+Taking step      592 to t =  3.812777e-09 at 2001-01-26-16:21:21.076.
+Taking step      593 to t =  3.819218e-09 at 2001-01-26-16:21:21.108.
+Taking step      594 to t =  3.825658e-09 at 2001-01-26-16:21:21.140.
+Taking step      595 to t =  3.832099e-09 at 2001-01-26-16:21:21.172.
+Taking step      596 to t =  3.838539e-09 at 2001-01-26-16:21:21.213.
+Taking step      597 to t =  3.844980e-09 at 2001-01-26-16:21:21.244.
+Taking step      598 to t =  3.851420e-09 at 2001-01-26-16:21:21.275.
+Taking step      599 to t =  3.857861e-09 at 2001-01-26-16:21:21.307.
+Taking step      600 to t =  3.864301e-09 at 2001-01-26-16:21:21.337.
+Taking step      601 to t =  3.870742e-09 at 2001-01-26-16:21:21.367.
+Taking step      602 to t =  3.877182e-09 at 2001-01-26-16:21:21.397.
+Taking step      603 to t =  3.883623e-09 at 2001-01-26-16:21:21.428.
+Taking step      604 to t =  3.890063e-09 at 2001-01-26-16:21:21.459.
+Taking step      605 to t =  3.896504e-09 at 2001-01-26-16:21:21.489.
+Taking step      606 to t =  3.902944e-09 at 2001-01-26-16:21:21.521.
+Taking step      607 to t =  3.909385e-09 at 2001-01-26-16:21:21.552.
+Taking step      608 to t =  3.915825e-09 at 2001-01-26-16:21:21.583.
+Taking step      609 to t =  3.922266e-09 at 2001-01-26-16:21:21.613.
+Taking step      610 to t =  3.928706e-09 at 2001-01-26-16:21:21.645.
+Taking step      611 to t =  3.935147e-09 at 2001-01-26-16:21:21.676.
+Taking step      612 to t =  3.941587e-09 at 2001-01-26-16:21:21.707.
+Taking step      613 to t =  3.948028e-09 at 2001-01-26-16:21:21.738.
+Taking step      614 to t =  3.954468e-09 at 2001-01-26-16:21:21.769.
+Taking step      615 to t =  3.960909e-09 at 2001-01-26-16:21:21.799.
+Taking step      616 to t =  3.967349e-09 at 2001-01-26-16:21:21.829.
+Taking step      617 to t =  3.973790e-09 at 2001-01-26-16:21:21.859.
+Taking step      618 to t =  3.980230e-09 at 2001-01-26-16:21:21.890.
+Taking step      619 to t =  3.986671e-09 at 2001-01-26-16:21:21.920.
+Taking step      620 to t =  3.993111e-09 at 2001-01-26-16:21:21.950.
+
+Domain: Starting dump 4 at time step 620 and clock, 2001-01-26-16:21:21.984.
+Globals dumped at 2001-01-26-16:21:21.990.
+Dumping grid boundaries at 2001-01-26-16:21:21.990.
+Dumped grid boundaries at 2001-01-26-16:21:21.990.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:22.002.
+Domain: Histories dumped at 2001-01-26-16:21:22.017.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:22.017.
+Dumping rho at 2001-01-26-16:21:22.017.
+Dumped rho at 2001-01-26-16:21:22.022.
+Dumping edgeE at 2001-01-26-16:21:22.022.
+Dumped edgeE at 2001-01-26-16:21:22.027.
+Dumping faceB at 2001-01-26-16:21:22.027.
+Dumped faceB at 2001-01-26-16:21:22.032.
+Dumping edgeJ at 2001-01-26-16:21:22.032.
+Dumped edgeJ at 2001-01-26-16:21:22.037.
+Dumping J at 2001-01-26-16:21:22.037.
+Dumped J at 2001-01-26-16:21:22.042.
+All multiFields dumped at 2001-01-26-16:21:22.053.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 4 completed at 2001-01-26-16:21:22.056.
+
+Taking step      621 to t =  3.999552e-09 at 2001-01-26-16:21:22.056.
+Taking step      622 to t =  4.005992e-09 at 2001-01-26-16:21:22.088.
+Taking step      623 to t =  4.012433e-09 at 2001-01-26-16:21:22.119.
+Taking step      624 to t =  4.018873e-09 at 2001-01-26-16:21:22.149.
+Taking step      625 to t =  4.025314e-09 at 2001-01-26-16:21:22.180.
+Taking step      626 to t =  4.031754e-09 at 2001-01-26-16:21:22.210.
+Taking step      627 to t =  4.038195e-09 at 2001-01-26-16:21:22.242.
+Taking step      628 to t =  4.044635e-09 at 2001-01-26-16:21:22.272.
+Taking step      629 to t =  4.051076e-09 at 2001-01-26-16:21:22.303.
+Taking step      630 to t =  4.057517e-09 at 2001-01-26-16:21:22.334.
+Taking step      631 to t =  4.063957e-09 at 2001-01-26-16:21:22.372.
+Taking step      632 to t =  4.070398e-09 at 2001-01-26-16:21:22.403.
+Taking step      633 to t =  4.076838e-09 at 2001-01-26-16:21:22.433.
+Taking step      634 to t =  4.083279e-09 at 2001-01-26-16:21:22.463.
+Taking step      635 to t =  4.089719e-09 at 2001-01-26-16:21:22.494.
+Taking step      636 to t =  4.096160e-09 at 2001-01-26-16:21:22.524.
+Taking step      637 to t =  4.102600e-09 at 2001-01-26-16:21:22.554.
+Taking step      638 to t =  4.109041e-09 at 2001-01-26-16:21:22.584.
+Taking step      639 to t =  4.115481e-09 at 2001-01-26-16:21:22.614.
+Taking step      640 to t =  4.121922e-09 at 2001-01-26-16:21:22.644.
+Taking step      641 to t =  4.128362e-09 at 2001-01-26-16:21:22.674.
+Taking step      642 to t =  4.134803e-09 at 2001-01-26-16:21:22.704.
+Taking step      643 to t =  4.141243e-09 at 2001-01-26-16:21:22.734.
+Taking step      644 to t =  4.147684e-09 at 2001-01-26-16:21:22.764.
+Taking step      645 to t =  4.154124e-09 at 2001-01-26-16:21:22.794.
+Taking step      646 to t =  4.160565e-09 at 2001-01-26-16:21:22.824.
+Taking step      647 to t =  4.167005e-09 at 2001-01-26-16:21:22.854.
+Taking step      648 to t =  4.173446e-09 at 2001-01-26-16:21:22.884.
+Taking step      649 to t =  4.179886e-09 at 2001-01-26-16:21:22.913.
+Taking step      650 to t =  4.186327e-09 at 2001-01-26-16:21:22.942.
+Taking step      651 to t =  4.192767e-09 at 2001-01-26-16:21:22.972.
+Taking step      652 to t =  4.199208e-09 at 2001-01-26-16:21:23.001.
+Taking step      653 to t =  4.205648e-09 at 2001-01-26-16:21:23.030.
+Taking step      654 to t =  4.212089e-09 at 2001-01-26-16:21:23.059.
+Taking step      655 to t =  4.218529e-09 at 2001-01-26-16:21:23.089.
+Taking step      656 to t =  4.224970e-09 at 2001-01-26-16:21:23.117.
+Taking step      657 to t =  4.231410e-09 at 2001-01-26-16:21:23.148.
+Taking step      658 to t =  4.237851e-09 at 2001-01-26-16:21:23.177.
+Taking step      659 to t =  4.244291e-09 at 2001-01-26-16:21:23.207.
+Taking step      660 to t =  4.250732e-09 at 2001-01-26-16:21:23.236.
+Taking step      661 to t =  4.257172e-09 at 2001-01-26-16:21:23.265.
+Taking step      662 to t =  4.263613e-09 at 2001-01-26-16:21:23.295.
+Taking step      663 to t =  4.270053e-09 at 2001-01-26-16:21:23.324.
+Taking step      664 to t =  4.276494e-09 at 2001-01-26-16:21:23.352.
+Taking step      665 to t =  4.282934e-09 at 2001-01-26-16:21:23.381.
+Taking step      666 to t =  4.289375e-09 at 2001-01-26-16:21:23.410.
+Taking step      667 to t =  4.295815e-09 at 2001-01-26-16:21:23.439.
+Taking step      668 to t =  4.302256e-09 at 2001-01-26-16:21:23.468.
+Taking step      669 to t =  4.308696e-09 at 2001-01-26-16:21:23.496.
+Taking step      670 to t =  4.315137e-09 at 2001-01-26-16:21:23.525.
+Taking step      671 to t =  4.321577e-09 at 2001-01-26-16:21:23.554.
+Taking step      672 to t =  4.328018e-09 at 2001-01-26-16:21:23.583.
+Taking step      673 to t =  4.334458e-09 at 2001-01-26-16:21:23.613.
+Taking step      674 to t =  4.340899e-09 at 2001-01-26-16:21:23.642.
+Taking step      675 to t =  4.347339e-09 at 2001-01-26-16:21:23.671.
+Taking step      676 to t =  4.353780e-09 at 2001-01-26-16:21:23.699.
+Taking step      677 to t =  4.360220e-09 at 2001-01-26-16:21:23.729.
+Taking step      678 to t =  4.366661e-09 at 2001-01-26-16:21:23.758.
+Taking step      679 to t =  4.373101e-09 at 2001-01-26-16:21:23.788.
+Taking step      680 to t =  4.379542e-09 at 2001-01-26-16:21:23.818.
+Taking step      681 to t =  4.385982e-09 at 2001-01-26-16:21:23.847.
+Taking step      682 to t =  4.392423e-09 at 2001-01-26-16:21:23.877.
+Taking step      683 to t =  4.398863e-09 at 2001-01-26-16:21:23.907.
+Taking step      684 to t =  4.405304e-09 at 2001-01-26-16:21:23.936.
+Taking step      685 to t =  4.411744e-09 at 2001-01-26-16:21:23.965.
+Taking step      686 to t =  4.418185e-09 at 2001-01-26-16:21:23.995.
+Taking step      687 to t =  4.424625e-09 at 2001-01-26-16:21:24.025.
+Taking step      688 to t =  4.431066e-09 at 2001-01-26-16:21:24.055.
+Taking step      689 to t =  4.437506e-09 at 2001-01-26-16:21:24.085.
+Taking step      690 to t =  4.443947e-09 at 2001-01-26-16:21:24.115.
+Taking step      691 to t =  4.450387e-09 at 2001-01-26-16:21:24.147.
+Taking step      692 to t =  4.456828e-09 at 2001-01-26-16:21:24.176.
+Taking step      693 to t =  4.463268e-09 at 2001-01-26-16:21:24.206.
+Taking step      694 to t =  4.469709e-09 at 2001-01-26-16:21:24.235.
+Taking step      695 to t =  4.476149e-09 at 2001-01-26-16:21:24.264.
+Taking step      696 to t =  4.482590e-09 at 2001-01-26-16:21:24.294.
+Taking step      697 to t =  4.489030e-09 at 2001-01-26-16:21:24.323.
+Taking step      698 to t =  4.495471e-09 at 2001-01-26-16:21:24.352.
+Taking step      699 to t =  4.501911e-09 at 2001-01-26-16:21:24.380.
+Taking step      700 to t =  4.508352e-09 at 2001-01-26-16:21:24.409.
+Taking step      701 to t =  4.514792e-09 at 2001-01-26-16:21:24.439.
+Taking step      702 to t =  4.521233e-09 at 2001-01-26-16:21:24.468.
+Taking step      703 to t =  4.527673e-09 at 2001-01-26-16:21:24.496.
+Taking step      704 to t =  4.534114e-09 at 2001-01-26-16:21:24.526.
+Taking step      705 to t =  4.540554e-09 at 2001-01-26-16:21:24.556.
+Taking step      706 to t =  4.546995e-09 at 2001-01-26-16:21:24.585.
+Taking step      707 to t =  4.553435e-09 at 2001-01-26-16:21:24.616.
+Taking step      708 to t =  4.559876e-09 at 2001-01-26-16:21:24.646.
+Taking step      709 to t =  4.566316e-09 at 2001-01-26-16:21:24.683.
+Taking step      710 to t =  4.572757e-09 at 2001-01-26-16:21:24.712.
+Taking step      711 to t =  4.579197e-09 at 2001-01-26-16:21:24.742.
+Taking step      712 to t =  4.585638e-09 at 2001-01-26-16:21:24.771.
+Taking step      713 to t =  4.592078e-09 at 2001-01-26-16:21:24.800.
+Taking step      714 to t =  4.598519e-09 at 2001-01-26-16:21:24.829.
+Taking step      715 to t =  4.604959e-09 at 2001-01-26-16:21:24.858.
+Taking step      716 to t =  4.611400e-09 at 2001-01-26-16:21:24.886.
+Taking step      717 to t =  4.617840e-09 at 2001-01-26-16:21:24.916.
+Taking step      718 to t =  4.624281e-09 at 2001-01-26-16:21:24.944.
+Taking step      719 to t =  4.630721e-09 at 2001-01-26-16:21:24.972.
+Taking step      720 to t =  4.637162e-09 at 2001-01-26-16:21:25.002.
+Taking step      721 to t =  4.643602e-09 at 2001-01-26-16:21:25.029.
+Taking step      722 to t =  4.650043e-09 at 2001-01-26-16:21:25.058.
+Taking step      723 to t =  4.656483e-09 at 2001-01-26-16:21:25.086.
+Taking step      724 to t =  4.662924e-09 at 2001-01-26-16:21:25.113.
+Taking step      725 to t =  4.669364e-09 at 2001-01-26-16:21:25.142.
+Taking step      726 to t =  4.675805e-09 at 2001-01-26-16:21:25.170.
+Taking step      727 to t =  4.682245e-09 at 2001-01-26-16:21:25.199.
+Taking step      728 to t =  4.688686e-09 at 2001-01-26-16:21:25.226.
+Taking step      729 to t =  4.695126e-09 at 2001-01-26-16:21:25.257.
+Taking step      730 to t =  4.701567e-09 at 2001-01-26-16:21:25.284.
+Taking step      731 to t =  4.708007e-09 at 2001-01-26-16:21:25.313.
+Taking step      732 to t =  4.714448e-09 at 2001-01-26-16:21:25.341.
+Taking step      733 to t =  4.720888e-09 at 2001-01-26-16:21:25.369.
+Taking step      734 to t =  4.727329e-09 at 2001-01-26-16:21:25.397.
+Taking step      735 to t =  4.733769e-09 at 2001-01-26-16:21:25.426.
+Taking step      736 to t =  4.740210e-09 at 2001-01-26-16:21:25.453.
+Taking step      737 to t =  4.746650e-09 at 2001-01-26-16:21:25.482.
+Taking step      738 to t =  4.753091e-09 at 2001-01-26-16:21:25.509.
+Taking step      739 to t =  4.759531e-09 at 2001-01-26-16:21:25.537.
+Taking step      740 to t =  4.765972e-09 at 2001-01-26-16:21:25.564.
+Taking step      741 to t =  4.772412e-09 at 2001-01-26-16:21:25.593.
+Taking step      742 to t =  4.778853e-09 at 2001-01-26-16:21:25.629.
+Taking step      743 to t =  4.785293e-09 at 2001-01-26-16:21:25.657.
+Taking step      744 to t =  4.791734e-09 at 2001-01-26-16:21:25.686.
+Taking step      745 to t =  4.798174e-09 at 2001-01-26-16:21:25.714.
+Taking step      746 to t =  4.804615e-09 at 2001-01-26-16:21:25.741.
+Taking step      747 to t =  4.811055e-09 at 2001-01-26-16:21:25.769.
+Taking step      748 to t =  4.817496e-09 at 2001-01-26-16:21:25.796.
+Taking step      749 to t =  4.823936e-09 at 2001-01-26-16:21:25.824.
+Taking step      750 to t =  4.830377e-09 at 2001-01-26-16:21:25.851.
+Taking step      751 to t =  4.836817e-09 at 2001-01-26-16:21:25.879.
+Taking step      752 to t =  4.843258e-09 at 2001-01-26-16:21:25.906.
+Taking step      753 to t =  4.849698e-09 at 2001-01-26-16:21:25.935.
+Taking step      754 to t =  4.856139e-09 at 2001-01-26-16:21:25.962.
+Taking step      755 to t =  4.862579e-09 at 2001-01-26-16:21:25.991.
+Taking step      756 to t =  4.869020e-09 at 2001-01-26-16:21:26.019.
+Taking step      757 to t =  4.875460e-09 at 2001-01-26-16:21:26.046.
+Taking step      758 to t =  4.881901e-09 at 2001-01-26-16:21:26.073.
+Taking step      759 to t =  4.888341e-09 at 2001-01-26-16:21:26.099.
+Taking step      760 to t =  4.894782e-09 at 2001-01-26-16:21:26.126.
+Taking step      761 to t =  4.901222e-09 at 2001-01-26-16:21:26.153.
+Taking step      762 to t =  4.907663e-09 at 2001-01-26-16:21:26.180.
+Taking step      763 to t =  4.914103e-09 at 2001-01-26-16:21:26.205.
+Taking step      764 to t =  4.920544e-09 at 2001-01-26-16:21:26.232.
+Taking step      765 to t =  4.926984e-09 at 2001-01-26-16:21:26.259.
+Taking step      766 to t =  4.933425e-09 at 2001-01-26-16:21:26.287.
+Taking step      767 to t =  4.939865e-09 at 2001-01-26-16:21:26.314.
+Taking step      768 to t =  4.946306e-09 at 2001-01-26-16:21:26.340.
+Taking step      769 to t =  4.952746e-09 at 2001-01-26-16:21:26.366.
+Taking step      770 to t =  4.959187e-09 at 2001-01-26-16:21:26.392.
+Taking step      771 to t =  4.965627e-09 at 2001-01-26-16:21:26.418.
+Taking step      772 to t =  4.972068e-09 at 2001-01-26-16:21:26.445.
+Taking step      773 to t =  4.978508e-09 at 2001-01-26-16:21:26.472.
+Taking step      774 to t =  4.984949e-09 at 2001-01-26-16:21:26.497.
+Taking step      775 to t =  4.991389e-09 at 2001-01-26-16:21:26.522.
+
+Domain: Starting dump 5 at time step 775 and clock, 2001-01-26-16:21:26.548.
+Globals dumped at 2001-01-26-16:21:26.554.
+Dumping grid boundaries at 2001-01-26-16:21:26.554.
+Dumped grid boundaries at 2001-01-26-16:21:26.554.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:26.568.
+Domain: Histories dumped at 2001-01-26-16:21:26.582.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:26.582.
+Dumping rho at 2001-01-26-16:21:26.582.
+Dumped rho at 2001-01-26-16:21:26.587.
+Dumping edgeE at 2001-01-26-16:21:26.587.
+Dumped edgeE at 2001-01-26-16:21:26.593.
+Dumping faceB at 2001-01-26-16:21:26.593.
+Dumped faceB at 2001-01-26-16:21:26.597.
+Dumping edgeJ at 2001-01-26-16:21:26.597.
+Dumped edgeJ at 2001-01-26-16:21:26.602.
+Dumping J at 2001-01-26-16:21:26.602.
+Dumped J at 2001-01-26-16:21:26.607.
+All multiFields dumped at 2001-01-26-16:21:26.612.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 5 completed at 2001-01-26-16:21:26.616.
+
+Taking step      776 to t =  4.997830e-09 at 2001-01-26-16:21:26.616.
+Taking step      777 to t =  5.004270e-09 at 2001-01-26-16:21:26.642.
+Taking step      778 to t =  5.010711e-09 at 2001-01-26-16:21:26.668.
+Taking step      779 to t =  5.017151e-09 at 2001-01-26-16:21:26.693.
+Taking step      780 to t =  5.023592e-09 at 2001-01-26-16:21:26.719.
+Taking step      781 to t =  5.030032e-09 at 2001-01-26-16:21:26.745.
+Taking step      782 to t =  5.036473e-09 at 2001-01-26-16:21:26.771.
+Taking step      783 to t =  5.042913e-09 at 2001-01-26-16:21:26.798.
+Taking step      784 to t =  5.049354e-09 at 2001-01-26-16:21:26.824.
+Taking step      785 to t =  5.055794e-09 at 2001-01-26-16:21:26.850.
+Taking step      786 to t =  5.062235e-09 at 2001-01-26-16:21:26.877.
+Taking step      787 to t =  5.068675e-09 at 2001-01-26-16:21:26.903.
+Taking step      788 to t =  5.075116e-09 at 2001-01-26-16:21:26.930.
+Taking step      789 to t =  5.081556e-09 at 2001-01-26-16:21:26.956.
+Taking step      790 to t =  5.087997e-09 at 2001-01-26-16:21:26.981.
+Taking step      791 to t =  5.094437e-09 at 2001-01-26-16:21:27.009.
+Taking step      792 to t =  5.100878e-09 at 2001-01-26-16:21:27.034.
+Taking step      793 to t =  5.107318e-09 at 2001-01-26-16:21:27.060.
+Taking step      794 to t =  5.113759e-09 at 2001-01-26-16:21:27.085.
+Taking step      795 to t =  5.120199e-09 at 2001-01-26-16:21:27.111.
+Taking step      796 to t =  5.126640e-09 at 2001-01-26-16:21:27.138.
+Taking step      797 to t =  5.133080e-09 at 2001-01-26-16:21:27.164.
+Taking step      798 to t =  5.139521e-09 at 2001-01-26-16:21:27.190.
+Taking step      799 to t =  5.145961e-09 at 2001-01-26-16:21:27.216.
+Taking step      800 to t =  5.152402e-09 at 2001-01-26-16:21:27.242.
+Taking step      801 to t =  5.158842e-09 at 2001-01-26-16:21:27.267.
+Taking step      802 to t =  5.165283e-09 at 2001-01-26-16:21:27.293.
+Taking step      803 to t =  5.171723e-09 at 2001-01-26-16:21:27.319.
+Taking step      804 to t =  5.178164e-09 at 2001-01-26-16:21:27.344.
+Taking step      805 to t =  5.184604e-09 at 2001-01-26-16:21:27.369.
+Taking step      806 to t =  5.191045e-09 at 2001-01-26-16:21:27.394.
+Taking step      807 to t =  5.197485e-09 at 2001-01-26-16:21:27.419.
+Taking step      808 to t =  5.203926e-09 at 2001-01-26-16:21:27.444.
+Taking step      809 to t =  5.210366e-09 at 2001-01-26-16:21:27.471.
+Taking step      810 to t =  5.216807e-09 at 2001-01-26-16:21:27.497.
+Taking step      811 to t =  5.223247e-09 at 2001-01-26-16:21:27.523.
+Taking step      812 to t =  5.229688e-09 at 2001-01-26-16:21:27.550.
+Taking step      813 to t =  5.236128e-09 at 2001-01-26-16:21:27.575.
+Taking step      814 to t =  5.242569e-09 at 2001-01-26-16:21:27.599.
+Taking step      815 to t =  5.249009e-09 at 2001-01-26-16:21:27.624.
+Taking step      816 to t =  5.255450e-09 at 2001-01-26-16:21:27.650.
+Taking step      817 to t =  5.261890e-09 at 2001-01-26-16:21:27.674.
+Taking step      818 to t =  5.268331e-09 at 2001-01-26-16:21:27.700.
+Taking step      819 to t =  5.274771e-09 at 2001-01-26-16:21:27.726.
+Taking step      820 to t =  5.281212e-09 at 2001-01-26-16:21:27.752.
+Taking step      821 to t =  5.287652e-09 at 2001-01-26-16:21:27.778.
+Taking step      822 to t =  5.294093e-09 at 2001-01-26-16:21:27.804.
+Taking step      823 to t =  5.300533e-09 at 2001-01-26-16:21:27.829.
+Taking step      824 to t =  5.306974e-09 at 2001-01-26-16:21:27.854.
+Taking step      825 to t =  5.313414e-09 at 2001-01-26-16:21:27.880.
+Taking step      826 to t =  5.319855e-09 at 2001-01-26-16:21:27.906.
+Taking step      827 to t =  5.326295e-09 at 2001-01-26-16:21:27.932.
+Taking step      828 to t =  5.332736e-09 at 2001-01-26-16:21:27.958.
+Taking step      829 to t =  5.339176e-09 at 2001-01-26-16:21:27.985.
+Taking step      830 to t =  5.345617e-09 at 2001-01-26-16:21:28.010.
+Taking step      831 to t =  5.352057e-09 at 2001-01-26-16:21:28.035.
+Taking step      832 to t =  5.358498e-09 at 2001-01-26-16:21:28.061.
+Taking step      833 to t =  5.364938e-09 at 2001-01-26-16:21:28.087.
+Taking step      834 to t =  5.371379e-09 at 2001-01-26-16:21:28.113.
+Taking step      835 to t =  5.377819e-09 at 2001-01-26-16:21:28.139.
+Taking step      836 to t =  5.384260e-09 at 2001-01-26-16:21:28.164.
+Taking step      837 to t =  5.390700e-09 at 2001-01-26-16:21:28.190.
+Taking step      838 to t =  5.397141e-09 at 2001-01-26-16:21:28.215.
+Taking step      839 to t =  5.403582e-09 at 2001-01-26-16:21:28.239.
+Taking step      840 to t =  5.410022e-09 at 2001-01-26-16:21:28.264.
+Taking step      841 to t =  5.416463e-09 at 2001-01-26-16:21:28.291.
+Taking step      842 to t =  5.422903e-09 at 2001-01-26-16:21:28.316.
+Taking step      843 to t =  5.429344e-09 at 2001-01-26-16:21:28.343.
+Taking step      844 to t =  5.435784e-09 at 2001-01-26-16:21:28.367.
+Taking step      845 to t =  5.442225e-09 at 2001-01-26-16:21:28.393.
+Taking step      846 to t =  5.448665e-09 at 2001-01-26-16:21:28.417.
+Taking step      847 to t =  5.455106e-09 at 2001-01-26-16:21:28.443.
+Taking step      848 to t =  5.461546e-09 at 2001-01-26-16:21:28.468.
+Taking step      849 to t =  5.467987e-09 at 2001-01-26-16:21:28.492.
+Taking step      850 to t =  5.474427e-09 at 2001-01-26-16:21:28.517.
+Taking step      851 to t =  5.480868e-09 at 2001-01-26-16:21:28.543.
+Taking step      852 to t =  5.487308e-09 at 2001-01-26-16:21:28.567.
+Taking step      853 to t =  5.493749e-09 at 2001-01-26-16:21:28.592.
+Taking step      854 to t =  5.500189e-09 at 2001-01-26-16:21:28.617.
+Taking step      855 to t =  5.506630e-09 at 2001-01-26-16:21:28.642.
+Taking step      856 to t =  5.513070e-09 at 2001-01-26-16:21:28.667.
+Taking step      857 to t =  5.519511e-09 at 2001-01-26-16:21:28.691.
+Taking step      858 to t =  5.525951e-09 at 2001-01-26-16:21:28.716.
+Taking step      859 to t =  5.532392e-09 at 2001-01-26-16:21:28.740.
+Taking step      860 to t =  5.538832e-09 at 2001-01-26-16:21:28.764.
+Taking step      861 to t =  5.545273e-09 at 2001-01-26-16:21:28.789.
+Taking step      862 to t =  5.551713e-09 at 2001-01-26-16:21:28.814.
+Taking step      863 to t =  5.558154e-09 at 2001-01-26-16:21:28.838.
+Taking step      864 to t =  5.564594e-09 at 2001-01-26-16:21:28.862.
+Taking step      865 to t =  5.571035e-09 at 2001-01-26-16:21:28.888.
+Taking step      866 to t =  5.577475e-09 at 2001-01-26-16:21:28.911.
+Taking step      867 to t =  5.583916e-09 at 2001-01-26-16:21:28.935.
+Taking step      868 to t =  5.590356e-09 at 2001-01-26-16:21:28.959.
+Taking step      869 to t =  5.596797e-09 at 2001-01-26-16:21:28.985.
+Taking step      870 to t =  5.603237e-09 at 2001-01-26-16:21:29.010.
+Taking step      871 to t =  5.609678e-09 at 2001-01-26-16:21:29.037.
+Taking step      872 to t =  5.616118e-09 at 2001-01-26-16:21:29.062.
+Taking step      873 to t =  5.622559e-09 at 2001-01-26-16:21:29.086.
+Taking step      874 to t =  5.628999e-09 at 2001-01-26-16:21:29.110.
+Taking step      875 to t =  5.635440e-09 at 2001-01-26-16:21:29.134.
+Taking step      876 to t =  5.641880e-09 at 2001-01-26-16:21:29.159.
+Taking step      877 to t =  5.648321e-09 at 2001-01-26-16:21:29.183.
+Taking step      878 to t =  5.654761e-09 at 2001-01-26-16:21:29.207.
+Taking step      879 to t =  5.661202e-09 at 2001-01-26-16:21:29.232.
+Taking step      880 to t =  5.667642e-09 at 2001-01-26-16:21:29.256.
+Taking step      881 to t =  5.674083e-09 at 2001-01-26-16:21:29.279.
+Taking step      882 to t =  5.680523e-09 at 2001-01-26-16:21:29.303.
+Taking step      883 to t =  5.686964e-09 at 2001-01-26-16:21:29.327.
+Taking step      884 to t =  5.693404e-09 at 2001-01-26-16:21:29.351.
+Taking step      885 to t =  5.699845e-09 at 2001-01-26-16:21:29.376.
+Taking step      886 to t =  5.706285e-09 at 2001-01-26-16:21:29.400.
+Taking step      887 to t =  5.712726e-09 at 2001-01-26-16:21:29.423.
+Taking step      888 to t =  5.719166e-09 at 2001-01-26-16:21:29.447.
+Taking step      889 to t =  5.725607e-09 at 2001-01-26-16:21:29.472.
+Taking step      890 to t =  5.732047e-09 at 2001-01-26-16:21:29.495.
+Taking step      891 to t =  5.738488e-09 at 2001-01-26-16:21:29.519.
+Taking step      892 to t =  5.744928e-09 at 2001-01-26-16:21:29.544.
+Taking step      893 to t =  5.751369e-09 at 2001-01-26-16:21:29.568.
+Taking step      894 to t =  5.757809e-09 at 2001-01-26-16:21:29.592.
+Taking step      895 to t =  5.764250e-09 at 2001-01-26-16:21:29.615.
+Taking step      896 to t =  5.770690e-09 at 2001-01-26-16:21:29.639.
+Taking step      897 to t =  5.777131e-09 at 2001-01-26-16:21:29.662.
+Taking step      898 to t =  5.783571e-09 at 2001-01-26-16:21:29.686.
+Taking step      899 to t =  5.790012e-09 at 2001-01-26-16:21:29.709.
+Taking step      900 to t =  5.796452e-09 at 2001-01-26-16:21:29.733.
+Taking step      901 to t =  5.802893e-09 at 2001-01-26-16:21:29.756.
+Taking step      902 to t =  5.809333e-09 at 2001-01-26-16:21:29.779.
+Taking step      903 to t =  5.815774e-09 at 2001-01-26-16:21:29.803.
+Taking step      904 to t =  5.822214e-09 at 2001-01-26-16:21:29.826.
+Taking step      905 to t =  5.828655e-09 at 2001-01-26-16:21:29.850.
+Taking step      906 to t =  5.835095e-09 at 2001-01-26-16:21:29.873.
+Taking step      907 to t =  5.841536e-09 at 2001-01-26-16:21:29.898.
+Taking step      908 to t =  5.847976e-09 at 2001-01-26-16:21:29.923.
+Taking step      909 to t =  5.854417e-09 at 2001-01-26-16:21:29.946.
+Taking step      910 to t =  5.860857e-09 at 2001-01-26-16:21:29.969.
+Taking step      911 to t =  5.867298e-09 at 2001-01-26-16:21:29.992.
+Taking step      912 to t =  5.873738e-09 at 2001-01-26-16:21:30.016.
+Taking step      913 to t =  5.880179e-09 at 2001-01-26-16:21:30.041.
+Taking step      914 to t =  5.886619e-09 at 2001-01-26-16:21:30.066.
+Taking step      915 to t =  5.893060e-09 at 2001-01-26-16:21:30.090.
+Taking step      916 to t =  5.899500e-09 at 2001-01-26-16:21:30.113.
+Taking step      917 to t =  5.905941e-09 at 2001-01-26-16:21:30.135.
+Taking step      918 to t =  5.912381e-09 at 2001-01-26-16:21:30.158.
+Taking step      919 to t =  5.918822e-09 at 2001-01-26-16:21:30.181.
+Taking step      920 to t =  5.925262e-09 at 2001-01-26-16:21:30.204.
+Taking step      921 to t =  5.931703e-09 at 2001-01-26-16:21:30.229.
+Taking step      922 to t =  5.938143e-09 at 2001-01-26-16:21:30.252.
+Taking step      923 to t =  5.944584e-09 at 2001-01-26-16:21:30.275.
+Taking step      924 to t =  5.951024e-09 at 2001-01-26-16:21:30.299.
+Taking step      925 to t =  5.957465e-09 at 2001-01-26-16:21:30.322.
+Taking step      926 to t =  5.963905e-09 at 2001-01-26-16:21:30.345.
+Taking step      927 to t =  5.970346e-09 at 2001-01-26-16:21:30.369.
+Taking step      928 to t =  5.976786e-09 at 2001-01-26-16:21:30.395.
+Taking step      929 to t =  5.983227e-09 at 2001-01-26-16:21:30.420.
+Taking step      930 to t =  5.989667e-09 at 2001-01-26-16:21:30.442.
+
+Domain: Starting dump 6 at time step 930 and clock, 2001-01-26-16:21:30.467.
+Globals dumped at 2001-01-26-16:21:30.472.
+Dumping grid boundaries at 2001-01-26-16:21:30.472.
+Dumped grid boundaries at 2001-01-26-16:21:30.472.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:30.480.
+Domain: Histories dumped at 2001-01-26-16:21:30.494.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:30.494.
+Dumping rho at 2001-01-26-16:21:30.494.
+Dumped rho at 2001-01-26-16:21:30.499.
+Dumping edgeE at 2001-01-26-16:21:30.499.
+Dumped edgeE at 2001-01-26-16:21:30.505.
+Dumping faceB at 2001-01-26-16:21:30.505.
+Dumped faceB at 2001-01-26-16:21:30.510.
+Dumping edgeJ at 2001-01-26-16:21:30.510.
+Dumped edgeJ at 2001-01-26-16:21:30.514.
+Dumping J at 2001-01-26-16:21:30.514.
+Dumped J at 2001-01-26-16:21:30.519.
+All multiFields dumped at 2001-01-26-16:21:30.524.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 6 completed at 2001-01-26-16:21:30.527.
+
+Taking step      931 to t =  5.996108e-09 at 2001-01-26-16:21:30.528.
+Taking step      932 to t =  6.002548e-09 at 2001-01-26-16:21:30.552.
+Taking step      933 to t =  6.008989e-09 at 2001-01-26-16:21:30.575.
+Taking step      934 to t =  6.015429e-09 at 2001-01-26-16:21:30.599.
+Taking step      935 to t =  6.021870e-09 at 2001-01-26-16:21:30.623.
+Taking step      936 to t =  6.028310e-09 at 2001-01-26-16:21:30.646.
+Taking step      937 to t =  6.034751e-09 at 2001-01-26-16:21:30.671.
+Taking step      938 to t =  6.041191e-09 at 2001-01-26-16:21:30.695.
+Taking step      939 to t =  6.047632e-09 at 2001-01-26-16:21:30.718.
+Taking step      940 to t =  6.054072e-09 at 2001-01-26-16:21:30.742.
+Taking step      941 to t =  6.060513e-09 at 2001-01-26-16:21:30.765.
+Taking step      942 to t =  6.066953e-09 at 2001-01-26-16:21:30.788.
+Taking step      943 to t =  6.073394e-09 at 2001-01-26-16:21:30.811.
+Taking step      944 to t =  6.079834e-09 at 2001-01-26-16:21:30.834.
+Taking step      945 to t =  6.086275e-09 at 2001-01-26-16:21:30.859.
+Taking step      946 to t =  6.092715e-09 at 2001-01-26-16:21:30.883.
+Taking step      947 to t =  6.099156e-09 at 2001-01-26-16:21:30.905.
+Taking step      948 to t =  6.105596e-09 at 2001-01-26-16:21:30.928.
+Taking step      949 to t =  6.112037e-09 at 2001-01-26-16:21:30.952.
+Taking step      950 to t =  6.118477e-09 at 2001-01-26-16:21:30.976.
+Taking step      951 to t =  6.124918e-09 at 2001-01-26-16:21:30.999.
+Taking step      952 to t =  6.131358e-09 at 2001-01-26-16:21:31.021.
+Taking step      953 to t =  6.137799e-09 at 2001-01-26-16:21:31.045.
+Taking step      954 to t =  6.144239e-09 at 2001-01-26-16:21:31.067.
+Taking step      955 to t =  6.150680e-09 at 2001-01-26-16:21:31.091.
+Taking step      956 to t =  6.157120e-09 at 2001-01-26-16:21:31.113.
+Taking step      957 to t =  6.163561e-09 at 2001-01-26-16:21:31.136.
+Taking step      958 to t =  6.170001e-09 at 2001-01-26-16:21:31.159.
+Taking step      959 to t =  6.176442e-09 at 2001-01-26-16:21:31.183.
+Taking step      960 to t =  6.182882e-09 at 2001-01-26-16:21:31.206.
+Taking step      961 to t =  6.189323e-09 at 2001-01-26-16:21:31.228.
+Taking step      962 to t =  6.195763e-09 at 2001-01-26-16:21:31.250.
+Taking step      963 to t =  6.202204e-09 at 2001-01-26-16:21:31.274.
+Taking step      964 to t =  6.208644e-09 at 2001-01-26-16:21:31.299.
+Taking step      965 to t =  6.215085e-09 at 2001-01-26-16:21:31.321.
+Taking step      966 to t =  6.221525e-09 at 2001-01-26-16:21:31.345.
+Taking step      967 to t =  6.227966e-09 at 2001-01-26-16:21:31.367.
+Taking step      968 to t =  6.234406e-09 at 2001-01-26-16:21:31.389.
+Taking step      969 to t =  6.240847e-09 at 2001-01-26-16:21:31.413.
+Taking step      970 to t =  6.247287e-09 at 2001-01-26-16:21:31.438.
+Taking step      971 to t =  6.253728e-09 at 2001-01-26-16:21:31.460.
+Taking step      972 to t =  6.260168e-09 at 2001-01-26-16:21:31.483.
+Taking step      973 to t =  6.266609e-09 at 2001-01-26-16:21:31.505.
+Taking step      974 to t =  6.273049e-09 at 2001-01-26-16:21:31.528.
+Taking step      975 to t =  6.279490e-09 at 2001-01-26-16:21:31.550.
+Taking step      976 to t =  6.285930e-09 at 2001-01-26-16:21:31.572.
+Taking step      977 to t =  6.292371e-09 at 2001-01-26-16:21:31.594.
+Taking step      978 to t =  6.298811e-09 at 2001-01-26-16:21:31.616.
+Taking step      979 to t =  6.305252e-09 at 2001-01-26-16:21:31.641.
+Taking step      980 to t =  6.311692e-09 at 2001-01-26-16:21:31.664.
+Taking step      981 to t =  6.318133e-09 at 2001-01-26-16:21:31.686.
+Taking step      982 to t =  6.324573e-09 at 2001-01-26-16:21:31.707.
+Taking step      983 to t =  6.331014e-09 at 2001-01-26-16:21:31.729.
+Taking step      984 to t =  6.337454e-09 at 2001-01-26-16:21:31.751.
+Taking step      985 to t =  6.343895e-09 at 2001-01-26-16:21:31.773.
+Taking step      986 to t =  6.350335e-09 at 2001-01-26-16:21:31.797.
+Taking step      987 to t =  6.356776e-09 at 2001-01-26-16:21:31.819.
+Taking step      988 to t =  6.363216e-09 at 2001-01-26-16:21:31.842.
+Taking step      989 to t =  6.369657e-09 at 2001-01-26-16:21:31.863.
+Taking step      990 to t =  6.376097e-09 at 2001-01-26-16:21:31.885.
+Taking step      991 to t =  6.382538e-09 at 2001-01-26-16:21:31.908.
+Taking step      992 to t =  6.388978e-09 at 2001-01-26-16:21:31.932.
+Taking step      993 to t =  6.395419e-09 at 2001-01-26-16:21:31.954.
+Taking step      994 to t =  6.401859e-09 at 2001-01-26-16:21:31.976.
+Taking step      995 to t =  6.408300e-09 at 2001-01-26-16:21:31.998.
+Taking step      996 to t =  6.414740e-09 at 2001-01-26-16:21:32.020.
+Taking step      997 to t =  6.421181e-09 at 2001-01-26-16:21:32.042.
+Taking step      998 to t =  6.427621e-09 at 2001-01-26-16:21:32.064.
+Taking step      999 to t =  6.434062e-09 at 2001-01-26-16:21:32.087.
+Taking step     1000 to t =  6.440502e-09 at 2001-01-26-16:21:32.110.
+Taking step     1001 to t =  6.446943e-09 at 2001-01-26-16:21:32.132.
+Rank 0 processed a total of 1.387977e+07 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 9173.000 electron at an average of 0.0000000 seconds per particle push.
+For all ranks, total average particle process time = 0.0000000 seconds.
+For all ranks, last average particle process time = 0.0000000 seconds.
+Sorting particles
+Sorting time: 0.0000000 per particle, 0.0000000 total
+Rank 0 processed a total of 1.387977e+07 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 9173.000 electron at an average of 0.0000000 seconds per particle push.
+For all ranks, total average particle process time = 0.0000000 seconds.
+For all ranks, last average particle process time = 0.0000000 seconds.
+Taking step     1002 to t =  6.453383e-09 at 2001-01-26-16:21:32.158.
+Rank 0 processed a total of 1.388893e+07 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 9163.000 electron at an average of 0.0000000 seconds per particle push.
+For all ranks, total average particle process time = 0.0000000 seconds.
+For all ranks, last average particle process time = 0.0000000 seconds.
+Taking step     1003 to t =  6.459824e-09 at 2001-01-26-16:21:32.181.
+Taking step     1004 to t =  6.466264e-09 at 2001-01-26-16:21:32.202.
+Taking step     1005 to t =  6.472705e-09 at 2001-01-26-16:21:32.225.
+Taking step     1006 to t =  6.479145e-09 at 2001-01-26-16:21:32.246.
+Taking step     1007 to t =  6.485586e-09 at 2001-01-26-16:21:32.268.
+Taking step     1008 to t =  6.492026e-09 at 2001-01-26-16:21:32.290.
+Taking step     1009 to t =  6.498467e-09 at 2001-01-26-16:21:32.312.
+Taking step     1010 to t =  6.504907e-09 at 2001-01-26-16:21:32.333.
+Taking step     1011 to t =  6.511348e-09 at 2001-01-26-16:21:32.354.
+Taking step     1012 to t =  6.517788e-09 at 2001-01-26-16:21:32.376.
+Taking step     1013 to t =  6.524229e-09 at 2001-01-26-16:21:32.398.
+Taking step     1014 to t =  6.530669e-09 at 2001-01-26-16:21:32.419.
+Taking step     1015 to t =  6.537110e-09 at 2001-01-26-16:21:32.442.
+Taking step     1016 to t =  6.543550e-09 at 2001-01-26-16:21:32.464.
+Taking step     1017 to t =  6.549991e-09 at 2001-01-26-16:21:32.487.
+Taking step     1018 to t =  6.556431e-09 at 2001-01-26-16:21:32.510.
+Taking step     1019 to t =  6.562872e-09 at 2001-01-26-16:21:32.532.
+Taking step     1020 to t =  6.569312e-09 at 2001-01-26-16:21:32.553.
+Taking step     1021 to t =  6.575753e-09 at 2001-01-26-16:21:32.574.
+Taking step     1022 to t =  6.582193e-09 at 2001-01-26-16:21:32.610.
+Taking step     1023 to t =  6.588634e-09 at 2001-01-26-16:21:32.631.
+Taking step     1024 to t =  6.595074e-09 at 2001-01-26-16:21:32.654.
+Taking step     1025 to t =  6.601515e-09 at 2001-01-26-16:21:32.675.
+Taking step     1026 to t =  6.607955e-09 at 2001-01-26-16:21:32.697.
+Taking step     1027 to t =  6.614396e-09 at 2001-01-26-16:21:32.719.
+Taking step     1028 to t =  6.620836e-09 at 2001-01-26-16:21:32.741.
+Taking step     1029 to t =  6.627277e-09 at 2001-01-26-16:21:32.762.
+Taking step     1030 to t =  6.633717e-09 at 2001-01-26-16:21:32.784.
+Taking step     1031 to t =  6.640158e-09 at 2001-01-26-16:21:32.807.
+Taking step     1032 to t =  6.646598e-09 at 2001-01-26-16:21:32.828.
+Taking step     1033 to t =  6.653039e-09 at 2001-01-26-16:21:32.849.
+Taking step     1034 to t =  6.659479e-09 at 2001-01-26-16:21:32.870.
+Taking step     1035 to t =  6.665920e-09 at 2001-01-26-16:21:32.892.
+Taking step     1036 to t =  6.672360e-09 at 2001-01-26-16:21:32.915.
+Taking step     1037 to t =  6.678801e-09 at 2001-01-26-16:21:32.936.
+Taking step     1038 to t =  6.685241e-09 at 2001-01-26-16:21:32.957.
+Taking step     1039 to t =  6.691682e-09 at 2001-01-26-16:21:32.979.
+Taking step     1040 to t =  6.698122e-09 at 2001-01-26-16:21:33.001.
+Taking step     1041 to t =  6.704563e-09 at 2001-01-26-16:21:33.022.
+Taking step     1042 to t =  6.711003e-09 at 2001-01-26-16:21:33.045.
+Taking step     1043 to t =  6.717444e-09 at 2001-01-26-16:21:33.067.
+Taking step     1044 to t =  6.723884e-09 at 2001-01-26-16:21:33.088.
+Taking step     1045 to t =  6.730325e-09 at 2001-01-26-16:21:33.109.
+Taking step     1046 to t =  6.736765e-09 at 2001-01-26-16:21:33.131.
+Taking step     1047 to t =  6.743206e-09 at 2001-01-26-16:21:33.152.
+Taking step     1048 to t =  6.749646e-09 at 2001-01-26-16:21:33.173.
+Taking step     1049 to t =  6.756087e-09 at 2001-01-26-16:21:33.194.
+Taking step     1050 to t =  6.762528e-09 at 2001-01-26-16:21:33.215.
+Taking step     1051 to t =  6.768968e-09 at 2001-01-26-16:21:33.237.
+Taking step     1052 to t =  6.775409e-09 at 2001-01-26-16:21:33.259.
+Taking step     1053 to t =  6.781849e-09 at 2001-01-26-16:21:33.281.
+Taking step     1054 to t =  6.788290e-09 at 2001-01-26-16:21:33.303.
+Taking step     1055 to t =  6.794730e-09 at 2001-01-26-16:21:33.323.
+Taking step     1056 to t =  6.801171e-09 at 2001-01-26-16:21:33.346.
+Taking step     1057 to t =  6.807611e-09 at 2001-01-26-16:21:33.369.
+Taking step     1058 to t =  6.814052e-09 at 2001-01-26-16:21:33.390.
+Taking step     1059 to t =  6.820492e-09 at 2001-01-26-16:21:33.410.
+Taking step     1060 to t =  6.826933e-09 at 2001-01-26-16:21:33.433.
+Taking step     1061 to t =  6.833373e-09 at 2001-01-26-16:21:33.454.
+Taking step     1062 to t =  6.839814e-09 at 2001-01-26-16:21:33.478.
+Taking step     1063 to t =  6.846254e-09 at 2001-01-26-16:21:33.501.
+Taking step     1064 to t =  6.852695e-09 at 2001-01-26-16:21:33.523.
+Taking step     1065 to t =  6.859135e-09 at 2001-01-26-16:21:33.544.
+Taking step     1066 to t =  6.865576e-09 at 2001-01-26-16:21:33.566.
+Taking step     1067 to t =  6.872016e-09 at 2001-01-26-16:21:33.588.
+Taking step     1068 to t =  6.878457e-09 at 2001-01-26-16:21:33.609.
+Taking step     1069 to t =  6.884897e-09 at 2001-01-26-16:21:33.629.
+Taking step     1070 to t =  6.891338e-09 at 2001-01-26-16:21:33.650.
+Taking step     1071 to t =  6.897778e-09 at 2001-01-26-16:21:33.671.
+Taking step     1072 to t =  6.904219e-09 at 2001-01-26-16:21:33.693.
+Taking step     1073 to t =  6.910659e-09 at 2001-01-26-16:21:33.714.
+Taking step     1074 to t =  6.917100e-09 at 2001-01-26-16:21:33.734.
+Taking step     1075 to t =  6.923540e-09 at 2001-01-26-16:21:33.755.
+Taking step     1076 to t =  6.929981e-09 at 2001-01-26-16:21:33.776.
+Taking step     1077 to t =  6.936421e-09 at 2001-01-26-16:21:33.798.
+Taking step     1078 to t =  6.942862e-09 at 2001-01-26-16:21:33.819.
+Taking step     1079 to t =  6.949302e-09 at 2001-01-26-16:21:33.839.
+Taking step     1080 to t =  6.955743e-09 at 2001-01-26-16:21:33.860.
+Taking step     1081 to t =  6.962183e-09 at 2001-01-26-16:21:33.882.
+Taking step     1082 to t =  6.968624e-09 at 2001-01-26-16:21:33.903.
+Taking step     1083 to t =  6.975064e-09 at 2001-01-26-16:21:33.925.
+Taking step     1084 to t =  6.981505e-09 at 2001-01-26-16:21:33.946.
+Taking step     1085 to t =  6.987945e-09 at 2001-01-26-16:21:33.966.
+
+Domain: Starting dump 7 at time step 1085 and clock, 2001-01-26-16:21:33.988.
+Globals dumped at 2001-01-26-16:21:33.993.
+Dumping grid boundaries at 2001-01-26-16:21:33.993.
+Dumped grid boundaries at 2001-01-26-16:21:33.994.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:34.002.
+Domain: Histories dumped at 2001-01-26-16:21:34.016.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:34.016.
+Dumping rho at 2001-01-26-16:21:34.016.
+Dumped rho at 2001-01-26-16:21:34.021.
+Dumping edgeE at 2001-01-26-16:21:34.021.
+Dumped edgeE at 2001-01-26-16:21:34.026.
+Dumping faceB at 2001-01-26-16:21:34.026.
+Dumped faceB at 2001-01-26-16:21:34.030.
+Dumping edgeJ at 2001-01-26-16:21:34.030.
+Dumped edgeJ at 2001-01-26-16:21:34.035.
+Dumping J at 2001-01-26-16:21:34.035.
+Dumped J at 2001-01-26-16:21:34.040.
+All multiFields dumped at 2001-01-26-16:21:34.045.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 7 completed at 2001-01-26-16:21:34.048.
+
+Taking step     1086 to t =  6.994386e-09 at 2001-01-26-16:21:34.048.
+Taking step     1087 to t =  7.000826e-09 at 2001-01-26-16:21:34.069.
+Taking step     1088 to t =  7.007267e-09 at 2001-01-26-16:21:34.090.
+Taking step     1089 to t =  7.013707e-09 at 2001-01-26-16:21:34.111.
+Taking step     1090 to t =  7.020148e-09 at 2001-01-26-16:21:34.132.
+Taking step     1091 to t =  7.026588e-09 at 2001-01-26-16:21:34.155.
+Taking step     1092 to t =  7.033029e-09 at 2001-01-26-16:21:34.177.
+Taking step     1093 to t =  7.039469e-09 at 2001-01-26-16:21:34.197.
+Taking step     1094 to t =  7.045910e-09 at 2001-01-26-16:21:34.219.
+Taking step     1095 to t =  7.052350e-09 at 2001-01-26-16:21:34.240.
+Taking step     1096 to t =  7.058791e-09 at 2001-01-26-16:21:34.260.
+Taking step     1097 to t =  7.065231e-09 at 2001-01-26-16:21:34.281.
+Taking step     1098 to t =  7.071672e-09 at 2001-01-26-16:21:34.301.
+Taking step     1099 to t =  7.078112e-09 at 2001-01-26-16:21:34.322.
+Taking step     1100 to t =  7.084553e-09 at 2001-01-26-16:21:34.344.
+Taking step     1101 to t =  7.090993e-09 at 2001-01-26-16:21:34.365.
+Taking step     1102 to t =  7.097434e-09 at 2001-01-26-16:21:34.386.
+Taking step     1103 to t =  7.103874e-09 at 2001-01-26-16:21:34.407.
+Taking step     1104 to t =  7.110315e-09 at 2001-01-26-16:21:34.428.
+Taking step     1105 to t =  7.116755e-09 at 2001-01-26-16:21:34.451.
+Taking step     1106 to t =  7.123196e-09 at 2001-01-26-16:21:34.472.
+Taking step     1107 to t =  7.129636e-09 at 2001-01-26-16:21:34.492.
+Taking step     1108 to t =  7.136077e-09 at 2001-01-26-16:21:34.516.
+Taking step     1109 to t =  7.142517e-09 at 2001-01-26-16:21:34.538.
+Taking step     1110 to t =  7.148958e-09 at 2001-01-26-16:21:34.559.
+Taking step     1111 to t =  7.155398e-09 at 2001-01-26-16:21:34.580.
+Taking step     1112 to t =  7.161839e-09 at 2001-01-26-16:21:34.601.
+Taking step     1113 to t =  7.168279e-09 at 2001-01-26-16:21:34.622.
+Taking step     1114 to t =  7.174720e-09 at 2001-01-26-16:21:34.643.
+Taking step     1115 to t =  7.181160e-09 at 2001-01-26-16:21:34.664.
+Taking step     1116 to t =  7.187601e-09 at 2001-01-26-16:21:34.685.
+Taking step     1117 to t =  7.194041e-09 at 2001-01-26-16:21:34.705.
+Taking step     1118 to t =  7.200482e-09 at 2001-01-26-16:21:34.727.
+Taking step     1119 to t =  7.206922e-09 at 2001-01-26-16:21:34.747.
+Taking step     1120 to t =  7.213363e-09 at 2001-01-26-16:21:34.769.
+Taking step     1121 to t =  7.219803e-09 at 2001-01-26-16:21:34.807.
+Taking step     1122 to t =  7.226244e-09 at 2001-01-26-16:21:34.827.
+Taking step     1123 to t =  7.232684e-09 at 2001-01-26-16:21:34.848.
+Taking step     1124 to t =  7.239125e-09 at 2001-01-26-16:21:34.869.
+Taking step     1125 to t =  7.245565e-09 at 2001-01-26-16:21:34.890.
+Taking step     1126 to t =  7.252006e-09 at 2001-01-26-16:21:34.910.
+Taking step     1127 to t =  7.258446e-09 at 2001-01-26-16:21:34.932.
+Taking step     1128 to t =  7.264887e-09 at 2001-01-26-16:21:34.952.
+Taking step     1129 to t =  7.271327e-09 at 2001-01-26-16:21:34.973.
+Taking step     1130 to t =  7.277768e-09 at 2001-01-26-16:21:34.995.
+Taking step     1131 to t =  7.284208e-09 at 2001-01-26-16:21:35.016.
+Taking step     1132 to t =  7.290649e-09 at 2001-01-26-16:21:35.037.
+Taking step     1133 to t =  7.297089e-09 at 2001-01-26-16:21:35.058.
+Taking step     1134 to t =  7.303530e-09 at 2001-01-26-16:21:35.079.
+Taking step     1135 to t =  7.309970e-09 at 2001-01-26-16:21:35.100.
+Taking step     1136 to t =  7.316411e-09 at 2001-01-26-16:21:35.121.
+Taking step     1137 to t =  7.322851e-09 at 2001-01-26-16:21:35.142.
+Taking step     1138 to t =  7.329292e-09 at 2001-01-26-16:21:35.163.
+Taking step     1139 to t =  7.335732e-09 at 2001-01-26-16:21:35.183.
+Taking step     1140 to t =  7.342173e-09 at 2001-01-26-16:21:35.204.
+Taking step     1141 to t =  7.348613e-09 at 2001-01-26-16:21:35.225.
+Taking step     1142 to t =  7.355054e-09 at 2001-01-26-16:21:35.246.
+Taking step     1143 to t =  7.361494e-09 at 2001-01-26-16:21:35.267.
+Taking step     1144 to t =  7.367935e-09 at 2001-01-26-16:21:35.287.
+Taking step     1145 to t =  7.374375e-09 at 2001-01-26-16:21:35.308.
+Taking step     1146 to t =  7.380816e-09 at 2001-01-26-16:21:35.328.
+Taking step     1147 to t =  7.387256e-09 at 2001-01-26-16:21:35.350.
+Taking step     1148 to t =  7.393697e-09 at 2001-01-26-16:21:35.370.
+Taking step     1149 to t =  7.400137e-09 at 2001-01-26-16:21:35.392.
+Taking step     1150 to t =  7.406578e-09 at 2001-01-26-16:21:35.412.
+Taking step     1151 to t =  7.413018e-09 at 2001-01-26-16:21:35.433.
+Taking step     1152 to t =  7.419459e-09 at 2001-01-26-16:21:35.453.
+Taking step     1153 to t =  7.425899e-09 at 2001-01-26-16:21:35.473.
+Taking step     1154 to t =  7.432340e-09 at 2001-01-26-16:21:35.492.
+Taking step     1155 to t =  7.438780e-09 at 2001-01-26-16:21:35.513.
+Taking step     1156 to t =  7.445221e-09 at 2001-01-26-16:21:35.535.
+Taking step     1157 to t =  7.451661e-09 at 2001-01-26-16:21:35.556.
+Taking step     1158 to t =  7.458102e-09 at 2001-01-26-16:21:35.576.
+Taking step     1159 to t =  7.464542e-09 at 2001-01-26-16:21:35.597.
+Taking step     1160 to t =  7.470983e-09 at 2001-01-26-16:21:35.617.
+Taking step     1161 to t =  7.477423e-09 at 2001-01-26-16:21:35.639.
+Taking step     1162 to t =  7.483864e-09 at 2001-01-26-16:21:35.659.
+Taking step     1163 to t =  7.490304e-09 at 2001-01-26-16:21:35.679.
+Taking step     1164 to t =  7.496745e-09 at 2001-01-26-16:21:35.699.
+Taking step     1165 to t =  7.503185e-09 at 2001-01-26-16:21:35.719.
+Taking step     1166 to t =  7.509626e-09 at 2001-01-26-16:21:35.739.
+Taking step     1167 to t =  7.516066e-09 at 2001-01-26-16:21:35.759.
+Taking step     1168 to t =  7.522507e-09 at 2001-01-26-16:21:35.779.
+Taking step     1169 to t =  7.528947e-09 at 2001-01-26-16:21:35.800.
+Taking step     1170 to t =  7.535388e-09 at 2001-01-26-16:21:35.820.
+Taking step     1171 to t =  7.541828e-09 at 2001-01-26-16:21:35.839.
+Taking step     1172 to t =  7.548269e-09 at 2001-01-26-16:21:35.859.
+Taking step     1173 to t =  7.554709e-09 at 2001-01-26-16:21:35.880.
+Taking step     1174 to t =  7.561150e-09 at 2001-01-26-16:21:35.899.
+Taking step     1175 to t =  7.567590e-09 at 2001-01-26-16:21:35.918.
+Taking step     1176 to t =  7.574031e-09 at 2001-01-26-16:21:35.940.
+Taking step     1177 to t =  7.580471e-09 at 2001-01-26-16:21:35.959.
+Taking step     1178 to t =  7.586912e-09 at 2001-01-26-16:21:35.981.
+Taking step     1179 to t =  7.593352e-09 at 2001-01-26-16:21:36.000.
+Taking step     1180 to t =  7.599793e-09 at 2001-01-26-16:21:36.020.
+Taking step     1181 to t =  7.606233e-09 at 2001-01-26-16:21:36.039.
+Taking step     1182 to t =  7.612674e-09 at 2001-01-26-16:21:36.060.
+Taking step     1183 to t =  7.619114e-09 at 2001-01-26-16:21:36.082.
+Taking step     1184 to t =  7.625555e-09 at 2001-01-26-16:21:36.106.
+Taking step     1185 to t =  7.631995e-09 at 2001-01-26-16:21:36.127.
+Taking step     1186 to t =  7.638436e-09 at 2001-01-26-16:21:36.153.
+Taking step     1187 to t =  7.644876e-09 at 2001-01-26-16:21:36.190.
+Taking step     1188 to t =  7.651317e-09 at 2001-01-26-16:21:36.229.
+Taking step     1189 to t =  7.657757e-09 at 2001-01-26-16:21:36.268.
+Taking step     1190 to t =  7.664198e-09 at 2001-01-26-16:21:36.290.
+Taking step     1191 to t =  7.670638e-09 at 2001-01-26-16:21:36.319.
+Taking step     1192 to t =  7.677079e-09 at 2001-01-26-16:21:36.339.
+Taking step     1193 to t =  7.683519e-09 at 2001-01-26-16:21:36.360.
+Taking step     1194 to t =  7.689960e-09 at 2001-01-26-16:21:36.379.
+Taking step     1195 to t =  7.696400e-09 at 2001-01-26-16:21:36.400.
+Taking step     1196 to t =  7.702841e-09 at 2001-01-26-16:21:36.422.
+Taking step     1197 to t =  7.709281e-09 at 2001-01-26-16:21:36.442.
+Taking step     1198 to t =  7.715722e-09 at 2001-01-26-16:21:36.465.
+Taking step     1199 to t =  7.722162e-09 at 2001-01-26-16:21:36.484.
+Taking step     1200 to t =  7.728603e-09 at 2001-01-26-16:21:36.504.
+Taking step     1201 to t =  7.735043e-09 at 2001-01-26-16:21:36.525.
+Taking step     1202 to t =  7.741484e-09 at 2001-01-26-16:21:36.545.
+Taking step     1203 to t =  7.747924e-09 at 2001-01-26-16:21:36.565.
+Taking step     1204 to t =  7.754365e-09 at 2001-01-26-16:21:36.586.
+Taking step     1205 to t =  7.760805e-09 at 2001-01-26-16:21:36.605.
+Taking step     1206 to t =  7.767246e-09 at 2001-01-26-16:21:36.623.
+Taking step     1207 to t =  7.773686e-09 at 2001-01-26-16:21:36.642.
+Taking step     1208 to t =  7.780127e-09 at 2001-01-26-16:21:36.661.
+Taking step     1209 to t =  7.786567e-09 at 2001-01-26-16:21:36.680.
+Taking step     1210 to t =  7.793008e-09 at 2001-01-26-16:21:36.699.
+Taking step     1211 to t =  7.799448e-09 at 2001-01-26-16:21:36.717.
+Taking step     1212 to t =  7.805889e-09 at 2001-01-26-16:21:36.736.
+Taking step     1213 to t =  7.812329e-09 at 2001-01-26-16:21:36.755.
+Taking step     1214 to t =  7.818770e-09 at 2001-01-26-16:21:36.774.
+Taking step     1215 to t =  7.825210e-09 at 2001-01-26-16:21:36.794.
+Taking step     1216 to t =  7.831651e-09 at 2001-01-26-16:21:36.813.
+Taking step     1217 to t =  7.838091e-09 at 2001-01-26-16:21:36.837.
+Taking step     1218 to t =  7.844532e-09 at 2001-01-26-16:21:36.857.
+Taking step     1219 to t =  7.850972e-09 at 2001-01-26-16:21:36.877.
+Taking step     1220 to t =  7.857413e-09 at 2001-01-26-16:21:36.897.
+Taking step     1221 to t =  7.863853e-09 at 2001-01-26-16:21:36.916.
+Taking step     1222 to t =  7.870294e-09 at 2001-01-26-16:21:36.936.
+Taking step     1223 to t =  7.876734e-09 at 2001-01-26-16:21:36.955.
+Taking step     1224 to t =  7.883175e-09 at 2001-01-26-16:21:36.976.
+Taking step     1225 to t =  7.889615e-09 at 2001-01-26-16:21:36.996.
+Taking step     1226 to t =  7.896056e-09 at 2001-01-26-16:21:37.015.
+Taking step     1227 to t =  7.902496e-09 at 2001-01-26-16:21:37.034.
+Taking step     1228 to t =  7.908937e-09 at 2001-01-26-16:21:37.053.
+Taking step     1229 to t =  7.915377e-09 at 2001-01-26-16:21:37.073.
+Taking step     1230 to t =  7.921818e-09 at 2001-01-26-16:21:37.092.
+Taking step     1231 to t =  7.928258e-09 at 2001-01-26-16:21:37.111.
+Taking step     1232 to t =  7.934699e-09 at 2001-01-26-16:21:37.134.
+Taking step     1233 to t =  7.941139e-09 at 2001-01-26-16:21:37.154.
+Taking step     1234 to t =  7.947580e-09 at 2001-01-26-16:21:37.173.
+Taking step     1235 to t =  7.954020e-09 at 2001-01-26-16:21:37.192.
+Taking step     1236 to t =  7.960461e-09 at 2001-01-26-16:21:37.212.
+Taking step     1237 to t =  7.966901e-09 at 2001-01-26-16:21:37.232.
+Taking step     1238 to t =  7.973342e-09 at 2001-01-26-16:21:37.251.
+Taking step     1239 to t =  7.979782e-09 at 2001-01-26-16:21:37.271.
+Taking step     1240 to t =  7.986223e-09 at 2001-01-26-16:21:37.290.
+
+Domain: Starting dump 8 at time step 1240 and clock, 2001-01-26-16:21:37.310.
+Globals dumped at 2001-01-26-16:21:37.316.
+Dumping grid boundaries at 2001-01-26-16:21:37.316.
+Dumped grid boundaries at 2001-01-26-16:21:37.316.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:37.335.
+Domain: Histories dumped at 2001-01-26-16:21:37.348.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:37.348.
+Dumping rho at 2001-01-26-16:21:37.348.
+Dumped rho at 2001-01-26-16:21:37.352.
+Dumping edgeE at 2001-01-26-16:21:37.353.
+Dumped edgeE at 2001-01-26-16:21:37.357.
+Dumping faceB at 2001-01-26-16:21:37.357.
+Dumped faceB at 2001-01-26-16:21:37.362.
+Dumping edgeJ at 2001-01-26-16:21:37.362.
+Dumped edgeJ at 2001-01-26-16:21:37.367.
+Dumping J at 2001-01-26-16:21:37.367.
+Dumped J at 2001-01-26-16:21:37.372.
+All multiFields dumped at 2001-01-26-16:21:37.376.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 8 completed at 2001-01-26-16:21:37.380.
+
+Taking step     1241 to t =  7.992663e-09 at 2001-01-26-16:21:37.380.
+Taking step     1242 to t =  7.999104e-09 at 2001-01-26-16:21:37.399.
+Taking step     1243 to t =  8.005544e-09 at 2001-01-26-16:21:37.418.
+Taking step     1244 to t =  8.011985e-09 at 2001-01-26-16:21:37.437.
+Taking step     1245 to t =  8.018425e-09 at 2001-01-26-16:21:37.457.
+Taking step     1246 to t =  8.024866e-09 at 2001-01-26-16:21:37.477.
+Taking step     1247 to t =  8.031306e-09 at 2001-01-26-16:21:37.496.
+Taking step     1248 to t =  8.037747e-09 at 2001-01-26-16:21:37.515.
+Taking step     1249 to t =  8.044187e-09 at 2001-01-26-16:21:37.535.
+Taking step     1250 to t =  8.050628e-09 at 2001-01-26-16:21:37.553.
+Taking step     1251 to t =  8.057068e-09 at 2001-01-26-16:21:37.572.
+Taking step     1252 to t =  8.063509e-09 at 2001-01-26-16:21:37.593.
+Taking step     1253 to t =  8.069949e-09 at 2001-01-26-16:21:37.611.
+Taking step     1254 to t =  8.076390e-09 at 2001-01-26-16:21:37.631.
+Taking step     1255 to t =  8.082830e-09 at 2001-01-26-16:21:37.649.
+Taking step     1256 to t =  8.089271e-09 at 2001-01-26-16:21:37.668.
+Taking step     1257 to t =  8.095711e-09 at 2001-01-26-16:21:37.687.
+Taking step     1258 to t =  8.102152e-09 at 2001-01-26-16:21:37.706.
+Taking step     1259 to t =  8.108593e-09 at 2001-01-26-16:21:37.726.
+Taking step     1260 to t =  8.115033e-09 at 2001-01-26-16:21:37.745.
+Taking step     1261 to t =  8.121474e-09 at 2001-01-26-16:21:37.763.
+Taking step     1262 to t =  8.127914e-09 at 2001-01-26-16:21:37.782.
+Taking step     1263 to t =  8.134355e-09 at 2001-01-26-16:21:37.800.
+Taking step     1264 to t =  8.140795e-09 at 2001-01-26-16:21:37.818.
+Taking step     1265 to t =  8.147236e-09 at 2001-01-26-16:21:37.837.
+Taking step     1266 to t =  8.153676e-09 at 2001-01-26-16:21:37.855.
+Taking step     1267 to t =  8.160117e-09 at 2001-01-26-16:21:37.883.
+Taking step     1268 to t =  8.166557e-09 at 2001-01-26-16:21:37.905.
+Taking step     1269 to t =  8.172998e-09 at 2001-01-26-16:21:37.923.
+Taking step     1270 to t =  8.179438e-09 at 2001-01-26-16:21:37.943.
+Taking step     1271 to t =  8.185879e-09 at 2001-01-26-16:21:37.962.
+Taking step     1272 to t =  8.192319e-09 at 2001-01-26-16:21:37.982.
+Taking step     1273 to t =  8.198760e-09 at 2001-01-26-16:21:38.001.
+Taking step     1274 to t =  8.205200e-09 at 2001-01-26-16:21:38.022.
+Taking step     1275 to t =  8.211641e-09 at 2001-01-26-16:21:38.042.
+Taking step     1276 to t =  8.218081e-09 at 2001-01-26-16:21:38.063.
+Taking step     1277 to t =  8.224522e-09 at 2001-01-26-16:21:38.083.
+Taking step     1278 to t =  8.230962e-09 at 2001-01-26-16:21:38.102.
+Taking step     1279 to t =  8.237403e-09 at 2001-01-26-16:21:38.121.
+Taking step     1280 to t =  8.243843e-09 at 2001-01-26-16:21:38.141.
+Taking step     1281 to t =  8.250284e-09 at 2001-01-26-16:21:38.160.
+Taking step     1282 to t =  8.256724e-09 at 2001-01-26-16:21:38.179.
+Taking step     1283 to t =  8.263165e-09 at 2001-01-26-16:21:38.198.
+Taking step     1284 to t =  8.269605e-09 at 2001-01-26-16:21:38.217.
+Taking step     1285 to t =  8.276046e-09 at 2001-01-26-16:21:38.238.
+Taking step     1286 to t =  8.282486e-09 at 2001-01-26-16:21:38.256.
+Taking step     1287 to t =  8.288927e-09 at 2001-01-26-16:21:38.275.
+Taking step     1288 to t =  8.295367e-09 at 2001-01-26-16:21:38.302.
+Taking step     1289 to t =  8.301808e-09 at 2001-01-26-16:21:38.321.
+Taking step     1290 to t =  8.308248e-09 at 2001-01-26-16:21:38.344.
+Taking step     1291 to t =  8.314689e-09 at 2001-01-26-16:21:38.366.
+Taking step     1292 to t =  8.321129e-09 at 2001-01-26-16:21:38.401.
+Taking step     1293 to t =  8.327570e-09 at 2001-01-26-16:21:38.436.
+Taking step     1294 to t =  8.334010e-09 at 2001-01-26-16:21:38.455.
+Taking step     1295 to t =  8.340451e-09 at 2001-01-26-16:21:38.474.
+Taking step     1296 to t =  8.346891e-09 at 2001-01-26-16:21:38.494.
+Taking step     1297 to t =  8.353332e-09 at 2001-01-26-16:21:38.514.
+Taking step     1298 to t =  8.359772e-09 at 2001-01-26-16:21:38.533.
+Taking step     1299 to t =  8.366213e-09 at 2001-01-26-16:21:38.574.
+Taking step     1300 to t =  8.372653e-09 at 2001-01-26-16:21:38.608.
+Taking step     1301 to t =  8.379094e-09 at 2001-01-26-16:21:38.629.
+Taking step     1302 to t =  8.385534e-09 at 2001-01-26-16:21:38.648.
+Taking step     1303 to t =  8.391975e-09 at 2001-01-26-16:21:38.665.
+Taking step     1304 to t =  8.398415e-09 at 2001-01-26-16:21:38.684.
+Taking step     1305 to t =  8.404856e-09 at 2001-01-26-16:21:38.703.
+Taking step     1306 to t =  8.411296e-09 at 2001-01-26-16:21:38.723.
+Taking step     1307 to t =  8.417737e-09 at 2001-01-26-16:21:38.740.
+Taking step     1308 to t =  8.424177e-09 at 2001-01-26-16:21:38.759.
+Taking step     1309 to t =  8.430618e-09 at 2001-01-26-16:21:38.778.
+Taking step     1310 to t =  8.437058e-09 at 2001-01-26-16:21:38.797.
+Taking step     1311 to t =  8.443499e-09 at 2001-01-26-16:21:38.816.
+Taking step     1312 to t =  8.449939e-09 at 2001-01-26-16:21:38.834.
+Taking step     1313 to t =  8.456380e-09 at 2001-01-26-16:21:38.853.
+Taking step     1314 to t =  8.462820e-09 at 2001-01-26-16:21:38.872.
+Taking step     1315 to t =  8.469261e-09 at 2001-01-26-16:21:38.891.
+Taking step     1316 to t =  8.475701e-09 at 2001-01-26-16:21:38.909.
+Taking step     1317 to t =  8.482142e-09 at 2001-01-26-16:21:38.929.
+Taking step     1318 to t =  8.488582e-09 at 2001-01-26-16:21:38.947.
+Taking step     1319 to t =  8.495023e-09 at 2001-01-26-16:21:38.967.
+Taking step     1320 to t =  8.501463e-09 at 2001-01-26-16:21:38.986.
+Taking step     1321 to t =  8.507904e-09 at 2001-01-26-16:21:39.004.
+Taking step     1322 to t =  8.514344e-09 at 2001-01-26-16:21:39.023.
+Taking step     1323 to t =  8.520785e-09 at 2001-01-26-16:21:39.041.
+Taking step     1324 to t =  8.527225e-09 at 2001-01-26-16:21:39.059.
+Taking step     1325 to t =  8.533666e-09 at 2001-01-26-16:21:39.078.
+Taking step     1326 to t =  8.540106e-09 at 2001-01-26-16:21:39.096.
+Taking step     1327 to t =  8.546547e-09 at 2001-01-26-16:21:39.114.
+Taking step     1328 to t =  8.552987e-09 at 2001-01-26-16:21:39.134.
+Taking step     1329 to t =  8.559428e-09 at 2001-01-26-16:21:39.153.
+Taking step     1330 to t =  8.565868e-09 at 2001-01-26-16:21:39.171.
+Taking step     1331 to t =  8.572309e-09 at 2001-01-26-16:21:39.190.
+Taking step     1332 to t =  8.578749e-09 at 2001-01-26-16:21:39.208.
+Taking step     1333 to t =  8.585190e-09 at 2001-01-26-16:21:39.227.
+Taking step     1334 to t =  8.591630e-09 at 2001-01-26-16:21:39.244.
+Taking step     1335 to t =  8.598071e-09 at 2001-01-26-16:21:39.264.
+Taking step     1336 to t =  8.604511e-09 at 2001-01-26-16:21:39.282.
+Taking step     1337 to t =  8.610952e-09 at 2001-01-26-16:21:39.301.
+Taking step     1338 to t =  8.617392e-09 at 2001-01-26-16:21:39.320.
+Taking step     1339 to t =  8.623833e-09 at 2001-01-26-16:21:39.338.
+Taking step     1340 to t =  8.630273e-09 at 2001-01-26-16:21:39.356.
+Taking step     1341 to t =  8.636714e-09 at 2001-01-26-16:21:39.375.
+Taking step     1342 to t =  8.643154e-09 at 2001-01-26-16:21:39.392.
+Taking step     1343 to t =  8.649595e-09 at 2001-01-26-16:21:39.410.
+Taking step     1344 to t =  8.656035e-09 at 2001-01-26-16:21:39.429.
+Taking step     1345 to t =  8.662476e-09 at 2001-01-26-16:21:39.447.
+Taking step     1346 to t =  8.668916e-09 at 2001-01-26-16:21:39.466.
+Taking step     1347 to t =  8.675357e-09 at 2001-01-26-16:21:39.484.
+Taking step     1348 to t =  8.681797e-09 at 2001-01-26-16:21:39.504.
+Taking step     1349 to t =  8.688238e-09 at 2001-01-26-16:21:39.524.
+Taking step     1350 to t =  8.694678e-09 at 2001-01-26-16:21:39.542.
+Taking step     1351 to t =  8.701119e-09 at 2001-01-26-16:21:39.559.
+Taking step     1352 to t =  8.707559e-09 at 2001-01-26-16:21:39.577.
+Taking step     1353 to t =  8.714000e-09 at 2001-01-26-16:21:39.595.
+Taking step     1354 to t =  8.720440e-09 at 2001-01-26-16:21:39.614.
+Taking step     1355 to t =  8.726881e-09 at 2001-01-26-16:21:39.632.
+Taking step     1356 to t =  8.733321e-09 at 2001-01-26-16:21:39.650.
+Taking step     1357 to t =  8.739762e-09 at 2001-01-26-16:21:39.668.
+Taking step     1358 to t =  8.746202e-09 at 2001-01-26-16:21:39.686.
+Taking step     1359 to t =  8.752643e-09 at 2001-01-26-16:21:39.705.
+Taking step     1360 to t =  8.759083e-09 at 2001-01-26-16:21:39.722.
+Taking step     1361 to t =  8.765524e-09 at 2001-01-26-16:21:39.740.
+Taking step     1362 to t =  8.771964e-09 at 2001-01-26-16:21:39.758.
+Taking step     1363 to t =  8.778405e-09 at 2001-01-26-16:21:39.775.
+Taking step     1364 to t =  8.784845e-09 at 2001-01-26-16:21:39.794.
+Taking step     1365 to t =  8.791286e-09 at 2001-01-26-16:21:39.811.
+Taking step     1366 to t =  8.797726e-09 at 2001-01-26-16:21:39.830.
+Taking step     1367 to t =  8.804167e-09 at 2001-01-26-16:21:39.848.
+Taking step     1368 to t =  8.810607e-09 at 2001-01-26-16:21:39.865.
+Taking step     1369 to t =  8.817048e-09 at 2001-01-26-16:21:39.882.
+Taking step     1370 to t =  8.823488e-09 at 2001-01-26-16:21:39.900.
+Taking step     1371 to t =  8.829929e-09 at 2001-01-26-16:21:39.917.
+Taking step     1372 to t =  8.836369e-09 at 2001-01-26-16:21:39.935.
+Taking step     1373 to t =  8.842810e-09 at 2001-01-26-16:21:39.953.
+Taking step     1374 to t =  8.849250e-09 at 2001-01-26-16:21:39.971.
+Taking step     1375 to t =  8.855691e-09 at 2001-01-26-16:21:39.989.
+Taking step     1376 to t =  8.862131e-09 at 2001-01-26-16:21:40.007.
+Taking step     1377 to t =  8.868572e-09 at 2001-01-26-16:21:40.025.
+Taking step     1378 to t =  8.875012e-09 at 2001-01-26-16:21:40.043.
+Taking step     1379 to t =  8.881453e-09 at 2001-01-26-16:21:40.061.
+Taking step     1380 to t =  8.887893e-09 at 2001-01-26-16:21:40.078.
+Taking step     1381 to t =  8.894334e-09 at 2001-01-26-16:21:40.098.
+Taking step     1382 to t =  8.900774e-09 at 2001-01-26-16:21:40.116.
+Taking step     1383 to t =  8.907215e-09 at 2001-01-26-16:21:40.133.
+Taking step     1384 to t =  8.913655e-09 at 2001-01-26-16:21:40.152.
+Taking step     1385 to t =  8.920096e-09 at 2001-01-26-16:21:40.170.
+Taking step     1386 to t =  8.926536e-09 at 2001-01-26-16:21:40.187.
+Taking step     1387 to t =  8.932977e-09 at 2001-01-26-16:21:40.205.
+Taking step     1388 to t =  8.939417e-09 at 2001-01-26-16:21:40.222.
+Taking step     1389 to t =  8.945858e-09 at 2001-01-26-16:21:40.241.
+Taking step     1390 to t =  8.952298e-09 at 2001-01-26-16:21:40.259.
+Taking step     1391 to t =  8.958739e-09 at 2001-01-26-16:21:40.276.
+Taking step     1392 to t =  8.965179e-09 at 2001-01-26-16:21:40.293.
+Taking step     1393 to t =  8.971620e-09 at 2001-01-26-16:21:40.312.
+Taking step     1394 to t =  8.978060e-09 at 2001-01-26-16:21:40.329.
+Taking step     1395 to t =  8.984501e-09 at 2001-01-26-16:21:40.348.
+
+Domain: Starting dump 9 at time step 1395 and clock, 2001-01-26-16:21:40.367.
+Globals dumped at 2001-01-26-16:21:40.373.
+Dumping grid boundaries at 2001-01-26-16:21:40.373.
+Dumped grid boundaries at 2001-01-26-16:21:40.373.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:40.381.
+Domain: Histories dumped at 2001-01-26-16:21:40.396.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:40.396.
+Dumping rho at 2001-01-26-16:21:40.396.
+Dumped rho at 2001-01-26-16:21:40.401.
+Dumping edgeE at 2001-01-26-16:21:40.401.
+Dumped edgeE at 2001-01-26-16:21:40.406.
+Dumping faceB at 2001-01-26-16:21:40.406.
+Dumped faceB at 2001-01-26-16:21:40.411.
+Dumping edgeJ at 2001-01-26-16:21:40.411.
+Dumped edgeJ at 2001-01-26-16:21:40.417.
+Dumping J at 2001-01-26-16:21:40.417.
+Dumped J at 2001-01-26-16:21:40.423.
+All multiFields dumped at 2001-01-26-16:21:40.428.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 9 completed at 2001-01-26-16:21:40.433.
+
+Taking step     1396 to t =  8.990941e-09 at 2001-01-26-16:21:40.433.
+Taking step     1397 to t =  8.997382e-09 at 2001-01-26-16:21:40.451.
+Taking step     1398 to t =  9.003822e-09 at 2001-01-26-16:21:40.470.
+Taking step     1399 to t =  9.010263e-09 at 2001-01-26-16:21:40.488.
+Taking step     1400 to t =  9.016703e-09 at 2001-01-26-16:21:40.506.
+Taking step     1401 to t =  9.023144e-09 at 2001-01-26-16:21:40.528.
+Taking step     1402 to t =  9.029584e-09 at 2001-01-26-16:21:40.547.
+Taking step     1403 to t =  9.036025e-09 at 2001-01-26-16:21:40.566.
+Taking step     1404 to t =  9.042465e-09 at 2001-01-26-16:21:40.585.
+Taking step     1405 to t =  9.048906e-09 at 2001-01-26-16:21:40.602.
+Taking step     1406 to t =  9.055346e-09 at 2001-01-26-16:21:40.621.
+Taking step     1407 to t =  9.061787e-09 at 2001-01-26-16:21:40.639.
+Taking step     1408 to t =  9.068227e-09 at 2001-01-26-16:21:40.656.
+Taking step     1409 to t =  9.074668e-09 at 2001-01-26-16:21:40.676.
+Taking step     1410 to t =  9.081108e-09 at 2001-01-26-16:21:40.695.
+Taking step     1411 to t =  9.087549e-09 at 2001-01-26-16:21:40.712.
+Taking step     1412 to t =  9.093989e-09 at 2001-01-26-16:21:40.730.
+Taking step     1413 to t =  9.100430e-09 at 2001-01-26-16:21:40.748.
+Taking step     1414 to t =  9.106870e-09 at 2001-01-26-16:21:40.765.
+Taking step     1415 to t =  9.113311e-09 at 2001-01-26-16:21:40.784.
+Taking step     1416 to t =  9.119751e-09 at 2001-01-26-16:21:40.801.
+Taking step     1417 to t =  9.126192e-09 at 2001-01-26-16:21:40.820.
+Taking step     1418 to t =  9.132632e-09 at 2001-01-26-16:21:40.838.
+Taking step     1419 to t =  9.139073e-09 at 2001-01-26-16:21:40.856.
+Taking step     1420 to t =  9.145513e-09 at 2001-01-26-16:21:40.874.
+Taking step     1421 to t =  9.151954e-09 at 2001-01-26-16:21:40.892.
+Taking step     1422 to t =  9.158394e-09 at 2001-01-26-16:21:40.910.
+Taking step     1423 to t =  9.164835e-09 at 2001-01-26-16:21:40.928.
+Taking step     1424 to t =  9.171275e-09 at 2001-01-26-16:21:40.945.
+Taking step     1425 to t =  9.177716e-09 at 2001-01-26-16:21:40.964.
+Taking step     1426 to t =  9.184156e-09 at 2001-01-26-16:21:40.981.
+Taking step     1427 to t =  9.190597e-09 at 2001-01-26-16:21:40.999.
+Taking step     1428 to t =  9.197037e-09 at 2001-01-26-16:21:41.016.
+Taking step     1429 to t =  9.203478e-09 at 2001-01-26-16:21:41.034.
+Taking step     1430 to t =  9.209918e-09 at 2001-01-26-16:21:41.051.
+Taking step     1431 to t =  9.216359e-09 at 2001-01-26-16:21:41.069.
+Taking step     1432 to t =  9.222799e-09 at 2001-01-26-16:21:41.085.
+Taking step     1433 to t =  9.229240e-09 at 2001-01-26-16:21:41.102.
+Taking step     1434 to t =  9.235680e-09 at 2001-01-26-16:21:41.119.
+Taking step     1435 to t =  9.242121e-09 at 2001-01-26-16:21:41.138.
+Taking step     1436 to t =  9.248561e-09 at 2001-01-26-16:21:41.157.
+Taking step     1437 to t =  9.255002e-09 at 2001-01-26-16:21:41.175.
+Taking step     1438 to t =  9.261442e-09 at 2001-01-26-16:21:41.193.
+Taking step     1439 to t =  9.267883e-09 at 2001-01-26-16:21:41.211.
+Taking step     1440 to t =  9.274323e-09 at 2001-01-26-16:21:41.231.
+Taking step     1441 to t =  9.280764e-09 at 2001-01-26-16:21:41.249.
+Taking step     1442 to t =  9.287204e-09 at 2001-01-26-16:21:41.267.
+Taking step     1443 to t =  9.293645e-09 at 2001-01-26-16:21:41.288.
+Taking step     1444 to t =  9.300085e-09 at 2001-01-26-16:21:41.307.
+Taking step     1445 to t =  9.306526e-09 at 2001-01-26-16:21:41.324.
+Taking step     1446 to t =  9.312966e-09 at 2001-01-26-16:21:41.342.
+Taking step     1447 to t =  9.319407e-09 at 2001-01-26-16:21:41.361.
+Taking step     1448 to t =  9.325847e-09 at 2001-01-26-16:21:41.379.
+Taking step     1449 to t =  9.332288e-09 at 2001-01-26-16:21:41.397.
+Taking step     1450 to t =  9.338728e-09 at 2001-01-26-16:21:41.414.
+Taking step     1451 to t =  9.345169e-09 at 2001-01-26-16:21:41.432.
+Taking step     1452 to t =  9.351609e-09 at 2001-01-26-16:21:41.449.
+Taking step     1453 to t =  9.358050e-09 at 2001-01-26-16:21:41.467.
+Taking step     1454 to t =  9.364490e-09 at 2001-01-26-16:21:41.484.
+Taking step     1455 to t =  9.370931e-09 at 2001-01-26-16:21:41.501.
+Taking step     1456 to t =  9.377371e-09 at 2001-01-26-16:21:41.518.
+Taking step     1457 to t =  9.383812e-09 at 2001-01-26-16:21:41.535.
+Taking step     1458 to t =  9.390252e-09 at 2001-01-26-16:21:41.554.
+Taking step     1459 to t =  9.396693e-09 at 2001-01-26-16:21:41.570.
+Taking step     1460 to t =  9.403133e-09 at 2001-01-26-16:21:41.588.
+Taking step     1461 to t =  9.409574e-09 at 2001-01-26-16:21:41.605.
+Taking step     1462 to t =  9.416014e-09 at 2001-01-26-16:21:41.622.
+Taking step     1463 to t =  9.422455e-09 at 2001-01-26-16:21:41.641.
+Taking step     1464 to t =  9.428895e-09 at 2001-01-26-16:21:41.659.
+Taking step     1465 to t =  9.435336e-09 at 2001-01-26-16:21:41.677.
+Taking step     1466 to t =  9.441776e-09 at 2001-01-26-16:21:41.695.
+Taking step     1467 to t =  9.448217e-09 at 2001-01-26-16:21:41.713.
+Taking step     1468 to t =  9.454658e-09 at 2001-01-26-16:21:41.730.
+Taking step     1469 to t =  9.461098e-09 at 2001-01-26-16:21:41.747.
+Taking step     1470 to t =  9.467539e-09 at 2001-01-26-16:21:41.764.
+Taking step     1471 to t =  9.473979e-09 at 2001-01-26-16:21:41.781.
+Taking step     1472 to t =  9.480420e-09 at 2001-01-26-16:21:41.797.
+Taking step     1473 to t =  9.486860e-09 at 2001-01-26-16:21:41.815.
+Taking step     1474 to t =  9.493301e-09 at 2001-01-26-16:21:41.831.
+Taking step     1475 to t =  9.499741e-09 at 2001-01-26-16:21:41.849.
+Taking step     1476 to t =  9.506182e-09 at 2001-01-26-16:21:41.866.
+Taking step     1477 to t =  9.512622e-09 at 2001-01-26-16:21:41.884.
+Taking step     1478 to t =  9.519063e-09 at 2001-01-26-16:21:41.902.
+Taking step     1479 to t =  9.525503e-09 at 2001-01-26-16:21:41.919.
+Taking step     1480 to t =  9.531944e-09 at 2001-01-26-16:21:41.937.
+Taking step     1481 to t =  9.538384e-09 at 2001-01-26-16:21:41.953.
+Taking step     1482 to t =  9.544825e-09 at 2001-01-26-16:21:41.971.
+Taking step     1483 to t =  9.551265e-09 at 2001-01-26-16:21:41.988.
+Taking step     1484 to t =  9.557706e-09 at 2001-01-26-16:21:42.005.
+Taking step     1485 to t =  9.564146e-09 at 2001-01-26-16:21:42.022.
+Taking step     1486 to t =  9.570587e-09 at 2001-01-26-16:21:42.039.
+Taking step     1487 to t =  9.577027e-09 at 2001-01-26-16:21:42.056.
+Taking step     1488 to t =  9.583468e-09 at 2001-01-26-16:21:42.072.
+Taking step     1489 to t =  9.589908e-09 at 2001-01-26-16:21:42.090.
+Taking step     1490 to t =  9.596349e-09 at 2001-01-26-16:21:42.107.
+Taking step     1491 to t =  9.602789e-09 at 2001-01-26-16:21:42.125.
+Taking step     1492 to t =  9.609230e-09 at 2001-01-26-16:21:42.141.
+Taking step     1493 to t =  9.615670e-09 at 2001-01-26-16:21:42.158.
+Taking step     1494 to t =  9.622111e-09 at 2001-01-26-16:21:42.174.
+Taking step     1495 to t =  9.628551e-09 at 2001-01-26-16:21:42.193.
+Taking step     1496 to t =  9.634992e-09 at 2001-01-26-16:21:42.210.
+Taking step     1497 to t =  9.641432e-09 at 2001-01-26-16:21:42.228.
+Taking step     1498 to t =  9.647873e-09 at 2001-01-26-16:21:42.245.
+Taking step     1499 to t =  9.654313e-09 at 2001-01-26-16:21:42.262.
+Taking step     1500 to t =  9.660754e-09 at 2001-01-26-16:21:42.279.
+Taking step     1501 to t =  9.667194e-09 at 2001-01-26-16:21:42.299.
+Taking step     1502 to t =  9.673635e-09 at 2001-01-26-16:21:42.316.
+Taking step     1503 to t =  9.680075e-09 at 2001-01-26-16:21:42.332.
+Taking step     1504 to t =  9.686516e-09 at 2001-01-26-16:21:42.348.
+Taking step     1505 to t =  9.692956e-09 at 2001-01-26-16:21:42.365.
+Taking step     1506 to t =  9.699397e-09 at 2001-01-26-16:21:42.382.
+Taking step     1507 to t =  9.705837e-09 at 2001-01-26-16:21:42.401.
+Taking step     1508 to t =  9.712278e-09 at 2001-01-26-16:21:42.417.
+Taking step     1509 to t =  9.718718e-09 at 2001-01-26-16:21:42.436.
+Taking step     1510 to t =  9.725159e-09 at 2001-01-26-16:21:42.452.
+Taking step     1511 to t =  9.731599e-09 at 2001-01-26-16:21:42.469.
+Taking step     1512 to t =  9.738040e-09 at 2001-01-26-16:21:42.486.
+Taking step     1513 to t =  9.744480e-09 at 2001-01-26-16:21:42.503.
+Taking step     1514 to t =  9.750921e-09 at 2001-01-26-16:21:42.520.
+Taking step     1515 to t =  9.757361e-09 at 2001-01-26-16:21:42.537.
+Taking step     1516 to t =  9.763802e-09 at 2001-01-26-16:21:42.565.
+Taking step     1517 to t =  9.770242e-09 at 2001-01-26-16:21:42.592.
+Taking step     1518 to t =  9.776683e-09 at 2001-01-26-16:21:42.609.
+Taking step     1519 to t =  9.783123e-09 at 2001-01-26-16:21:42.626.
+Taking step     1520 to t =  9.789564e-09 at 2001-01-26-16:21:42.644.
+Taking step     1521 to t =  9.796004e-09 at 2001-01-26-16:21:42.660.
+Taking step     1522 to t =  9.802445e-09 at 2001-01-26-16:21:42.677.
+Taking step     1523 to t =  9.808885e-09 at 2001-01-26-16:21:42.693.
+Taking step     1524 to t =  9.815326e-09 at 2001-01-26-16:21:42.711.
+Taking step     1525 to t =  9.821766e-09 at 2001-01-26-16:21:42.729.
+Taking step     1526 to t =  9.828207e-09 at 2001-01-26-16:21:42.745.
+Taking step     1527 to t =  9.834647e-09 at 2001-01-26-16:21:42.762.
+Taking step     1528 to t =  9.841088e-09 at 2001-01-26-16:21:42.779.
+Taking step     1529 to t =  9.847528e-09 at 2001-01-26-16:21:42.795.
+Taking step     1530 to t =  9.853969e-09 at 2001-01-26-16:21:42.813.
+Taking step     1531 to t =  9.860409e-09 at 2001-01-26-16:21:42.829.
+Taking step     1532 to t =  9.866850e-09 at 2001-01-26-16:21:42.846.
+Taking step     1533 to t =  9.873290e-09 at 2001-01-26-16:21:42.862.
+Taking step     1534 to t =  9.879731e-09 at 2001-01-26-16:21:42.880.
+Taking step     1535 to t =  9.886171e-09 at 2001-01-26-16:21:42.896.
+Taking step     1536 to t =  9.892612e-09 at 2001-01-26-16:21:42.913.
+Taking step     1537 to t =  9.899052e-09 at 2001-01-26-16:21:42.930.
+Taking step     1538 to t =  9.905493e-09 at 2001-01-26-16:21:42.946.
+Taking step     1539 to t =  9.911933e-09 at 2001-01-26-16:21:42.962.
+Taking step     1540 to t =  9.918374e-09 at 2001-01-26-16:21:42.979.
+Taking step     1541 to t =  9.924814e-09 at 2001-01-26-16:21:42.995.
+Taking step     1542 to t =  9.931255e-09 at 2001-01-26-16:21:43.011.
+Taking step     1543 to t =  9.937695e-09 at 2001-01-26-16:21:43.027.
+Taking step     1544 to t =  9.944136e-09 at 2001-01-26-16:21:43.043.
+Taking step     1545 to t =  9.950576e-09 at 2001-01-26-16:21:43.059.
+Taking step     1546 to t =  9.957017e-09 at 2001-01-26-16:21:43.075.
+Taking step     1547 to t =  9.963457e-09 at 2001-01-26-16:21:43.092.
+Taking step     1548 to t =  9.969898e-09 at 2001-01-26-16:21:43.108.
+Taking step     1549 to t =  9.976338e-09 at 2001-01-26-16:21:43.125.
+Taking step     1550 to t =  9.982779e-09 at 2001-01-26-16:21:43.142.
+
+Domain: Starting dump 10 at time step 1550 and clock, 2001-01-26-16:21:43.158.
+Globals dumped at 2001-01-26-16:21:43.164.
+Dumping grid boundaries at 2001-01-26-16:21:43.164.
+Dumped grid boundaries at 2001-01-26-16:21:43.164.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:43.171.
+Domain: Histories dumped at 2001-01-26-16:21:43.184.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:43.184.
+Dumping rho at 2001-01-26-16:21:43.184.
+Dumped rho at 2001-01-26-16:21:43.189.
+Dumping edgeE at 2001-01-26-16:21:43.189.
+Dumped edgeE at 2001-01-26-16:21:43.194.
+Dumping faceB at 2001-01-26-16:21:43.195.
+Dumped faceB at 2001-01-26-16:21:43.199.
+Dumping edgeJ at 2001-01-26-16:21:43.199.
+Dumped edgeJ at 2001-01-26-16:21:43.204.
+Dumping J at 2001-01-26-16:21:43.204.
+Dumped J at 2001-01-26-16:21:43.209.
+All multiFields dumped at 2001-01-26-16:21:43.214.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 10 completed at 2001-01-26-16:21:43.217.
+
+Taking step     1551 to t =  9.989219e-09 at 2001-01-26-16:21:43.217.
+Taking step     1552 to t =  9.995660e-09 at 2001-01-26-16:21:43.234.
+Main loop ended at clock time 2001-01-26-16:21:43.251
+
+Domain: Starting dump 11 at time step 1552 and clock, 2001-01-26-16:21:43.251.
+Globals dumped at 2001-01-26-16:21:43.256.
+Dumping grid boundaries at 2001-01-26-16:21:43.256.
+Dumped grid boundaries at 2001-01-26-16:21:43.256.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+Dumped electron.
+No fluids to dump.
+Domain: Dumping histories at 2001-01-26-16:21:43.263.
+Domain: Histories dumped at 2001-01-26-16:21:43.274.
+No SumRhoJ to dump.
+Dumping all multiFields at 2001-01-26-16:21:43.274.
+Dumping rho at 2001-01-26-16:21:43.274.
+Dumped rho at 2001-01-26-16:21:43.279.
+Dumping edgeE at 2001-01-26-16:21:43.279.
+Dumped edgeE at 2001-01-26-16:21:43.283.
+Dumping faceB at 2001-01-26-16:21:43.284.
+Dumped faceB at 2001-01-26-16:21:43.288.
+Dumping edgeJ at 2001-01-26-16:21:43.288.
+Dumped edgeJ at 2001-01-26-16:21:43.293.
+Dumping J at 2001-01-26-16:21:43.293.
+Dumped J at 2001-01-26-16:21:43.297.
+All multiFields dumped at 2001-01-26-16:21:43.303.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 11 completed at 2001-01-26-16:21:43.309.
+
+Rank 0 processed a total of 1.759718e+07 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 5011.000 electron at an average of 0.0000000 seconds per particle push.
+For all ranks, total average particle process time = 0.0000000 seconds.
+For all ranks, last average particle process time = 0.0000000 seconds.
+Deleting domain
+
+Deleting domain.
+OUTPUT SUMMARY:
+  There were 2 Notices encountered in this run.
+  There were 2 Warnings encountered in this run.
+  See above for more information.
+VORPAL completed at clock time    2001-01-26-16:21:43.515.
+NOTE: A VSimMD or VSimPD license was needed to run this simulation.
+No expand symbols file.  Will not limit expansion.
+Importing bwo2d_sim from D:\VSimTest\bwo_sim\cyl_test2.
+Importing mathphys from E:\VSim-10.1.0\Contents\engine\share\macros.
+Importing pml from E:\VSim-10.1.0\Contents\engine\share\deprecated.
+Importing verbosity from E:\VSim-10.1.0\Contents\engine\share\macros.
+Lines from 'bwo2d_sim.pre' processed.
+Finished with 'bwo2d_sim.pre'.
+--------------------- END ENGINE OUTPUT ----------------
+ 
+Notices:
+
+NOTICE: No mask specified, emitting from entire slab emitSurface specified in position generator 
+
+NOTICE: For position generator, beamemit, ptclsPerCell not specified.  Taking from owning species.
+
+
+Warnings:
+
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+
+
+Engine completed successfully.
+To see results, click on the "Visualize" icon in the icon panel.

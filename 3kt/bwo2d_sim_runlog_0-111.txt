@@ -1,0 +1,394 @@
+Working directory: D:\VSimTest\CYL\cyl_test2
+Running input file: bwo2d_sim.pre
+Command is "C:\Program Files\Tech-X\VSim-10.1.0\Contents\engine\bin\\vorpalser.exe" -dt 6.440502385360523e-12 -sd -d 155 -n 1552 -i "bwo2d_sim.pre"  -o "bwo2d_sim" 
+ 
+--------------------- START ENGINE OUTPUT ----------------
+Device detection found 1 options.
+Licensing Scheme file not found.
+Using Tech-X Licensing Scheme.
+LICENSE MANAGER: Using license file 'C:\ProgramData\Tech-X\VSim10\license.txt'
+LICENSE MANAGER: Working Directory: D:\VSimTest\CYL\cyl_test2\
+LICENSE MANAGER: License valid for package(s)/module(s): VSimBase VSimEM VSimMD VSimPA VSimPD 
+LICENSE MANAGER: License valid for macro(s): DrudeDebyeLorentzDielectric absorbingBox antennas antennasGPU deymittra dielectric dielectricGPU esGridBoundary farFields farFieldsGPU geometry geometryGPU gpuPml mal malGPU mirror originRadiatorPort perfectDispersion pml port scatteringBox scatteringBoxGPU secondOrderDiel specularBox statics yee yeeGPU 
+EULA not found. Skipping user agreement.
+WARNING: pml.mac is deprecated.
+Start-dumps enabled (if dumps active).
+
+TxsDevices::TxsDevices(): MPI not found.
+  commWorldSize = 1
+  commWorldRank = 0
+Will attempt 1 threads.
+
+SSE2 found.
+AVX found.
+AVX2 found.
+4 hardware threads found.
+TxsDevices::TxsDevices(): 4 openmp processes and 4 openmp threads.
+
+TxsDevices::TxsDevices(): compiled with cuda toolkit.
+TxsDevices::TxsDevices(): opened cuda driver.
+getFuncPtr(): resolved cuLaunchKernel.
+getFuncPtr(): resolved cuModuleLoadData.
+getFuncPtr(): resolved cuModuleUnload.
+getFuncPtr(): resolved cuModuleGetFunction.
+TxsDevices::TxsDevices(): found all function pointers.
+TxsDevices::TxsDevices(): 1 CUDA devices detected.
+TxsDevices::deviceProperties for device 0 are:
+  name = Quadro P600
+  compute capability = 6.1
+  clockRate = 1556500
+  memoryClockRate = 2005000
+  multiProcessorCount = 3
+  maxThreadsPerMultiProcessor = 2048
+  warpSize = 32
+  totalGlobalMem = 2 GB
+  sharedMemPerBlock = 49152
+  maxThreadsPerBlock = 1024
+  maxThreadsDim = 1024 1024 64
+  maxGridSize = 2147483647 65535 65535
+  unifiedAddressing = 1
+  concurrentKernels = 1
+  asyncEngineCount = 2
+TxsDevices::setDeviceNum(): setting device number to 0.
+
+VORPAL version 10.1.0 started at 2020-01-26-11:09:55.014.
+VORPAL Subversion revision = 35370
+CMake Subversion revision = 1698
+Built on host type = CYGWIN_NT-10.0-x86_64
+Built on host name = qawin10
+Built with compiler = C:/Program Files (x86)/Microsoft Visual Studio/2017/Professional/VC/Tools/MSVC/14.16.27023/bin/HostX64/x64/cl.exe  /W3 /GR /EHsc, version = 19.16.27034.0
+Run with command line = C:\Program Files\Tech-X\VSim-10.1.0\Contents\engine\bin\\vorpalser.exe -dt 6.440502385360523e-12 -sd -d 155 -n 1552 -i bwo2d_sim.pre -o bwo2d_sim
+
+Domain of kind, Domain2D, created at clock time 2020-01-26-11:09:55.336
+
+Domain: verbosity = 64.
+Domain: Dump mode is combo.
+Domain: Particle sorting is on.
+Time step is 6.4405e-12.
+Grid(s): globalGrid.
+Decomp(s): decomp.
+No STRgn(s) present.
+GridBoundary(s): bwoconductor bwoabsorber.
+No GridCurve(s) present.
+MultiField(s): myEmField.
+No EmField(s) present.
+No ComboEmField(s) present.
+ScalarDepositor(s): rhoDep.
+VectorDepositor(s): JDep.
+Species(s): electron.
+No Fluid(s) present.
+No Collision(s) present.
+No UpdateStep(s) present.
+No MonteCarloInteractions(s) present.
+No Ionizer(s) present.
+No ImpactCollider(s) present.
+No Semiconductor(s) present.
+Domain: No SumRhoJ present.
+
+RNGs will be seeded using randomSeed = 1 in a way that depends deterministially on randomSeed and the RNG name
+decomp: Periodic directions: none.
+Grid kind = varCylGrid
+Domain: VpGridInfo name = globalGrid with kind = coordProdGrid.
+Global simulation grid size: [54 27]
+Decomposition:
+ decomp0 = [54]
+ decomp1 = [27]
+
+Variable grid breaks/spacing info
+  idim = 0 -- txsBreaks = -0.02  0.52  
+  idim = 0 -- txsSpacings = 0.01  0.01  
+  idim = 1 -- txsBreaks = 0  0.27  
+  idim = 1 -- txsSpacings = 0.01  0.01  
+
+Grid is globalGrid.
+Global grid:
+  start     length   dx.front    dx.back    numPhys
+  -0.02       0.54       0.01       0.01       54
+      0       0.27       0.01       0.01       27
+Local grid for rank 0:
+  start     length   dx.front    dx.back    numPhys
+  -0.02       0.54       0.01       0.01       54
+      0       0.27       0.01       0.01       27
+
+Variable grids deleted
+
+-------------------------------------
+Grid type is cylindrical: uniform
+-------------------------------------
+
+NOTE: grid type reset
+Grid kind = uniCylGrid
+Domain: VpGridInfo name = globalGrid with kind = coordProdGrid.
+Global simulation grid size: [54 27]
+Decomposition:
+ decomp0 = [54]
+ decomp1 = [27]
+
+Grid is globalGrid.
+Global grid:
+  start     length        dx     numPhys
+  -0.02       0.54      0.01        54
+      0       0.27      0.01        27
+Local grid for rank 0:
+  start     length        dx     numPhys
+  -0.02       0.54      0.01        54
+      0       0.27      0.01        27
+
+Domain: begin setup of fld/ptcl messaging... in the domain
+Domain: messaging set up... in the domain
+Domain: Creating grid boundaries at clock time 2020-01-26-11:09:55.346.
+Domain: Constructing universe    at clock time 2020-01-26-11:09:55.346.
+universe: Calculating in/out function.
+universe: Collecting cut-cell edge data.
+universe: Collecting stair-step data.
+universe: Collecting cut-cell face data.
+universe: Collecting cut-cell volume data.
+Domain: universe initialized     at clock time 2020-01-26-11:09:55.351.
+Domain: Skipping creation of grid boundary, universe, as not constructed or already handled.
+Domain: Setting up grid boundary, bwoconductor, at clock time 2020-01-26-11:09:55.351.
+Domain: grid boundary, bwoconductor, data built at clock time 2020-01-26-11:09:55.353.
+Domain: Setting up grid boundary, bwoabsorber, at clock time 2020-01-26-11:09:55.353.
+Domain: grid boundary, bwoabsorber, data built at clock time 2020-01-26-11:09:55.356.
+Domain: Skipping solvers build for grid boundary, universe, as not constructed or already handled.
+Domain: Skipping initialization of grid boundary, universe, as not constructed or already handled.
+bwoconductor: Calculating in/out function.
+bwoconductor: Collecting cut-cell edge data.
+bwoconductor: Collecting stair-step data.
+bwoconductor: Collecting cut-cell face data.
+bwoconductor: Collecting cut-cell volume data.
+Grid boundary, bwoconductor, initialized in 0 seconds.
+bwoabsorber: Calculating in/out function.
+bwoabsorber: Collecting cut-cell edge data.
+bwoabsorber: Collecting stair-step data.
+bwoabsorber: Collecting cut-cell face data.
+bwoabsorber: Collecting cut-cell volume data.
+Grid boundary, bwoabsorber, initialized in 0 seconds.
+Domain: Grid boundaries created at clock time 2020-01-26-11:09:55.379.
+Domain: txsim reaction process holder built.
+Domain: txsim reaction physics holder built.
+Domain: History holder built.
+Domain: Multifields created.
+Domain: Multifields built.
+Domain: Non-combo EMfields built.
+Domain: Combo EMfields built.
+Setting custom mass of 9.10938e-31 kg for species electron
+Setting custom charge of -1.60218e-19 C for species electron
+No ionizationEnergy specified for species electron though it is species=custom, so setting ionizationEnergy to 0eV. If this species will be used in ionization or recombination reactions, you will want to specify the ionization energy in the species block.
+Domain:  attributes set.
+Domain: Species named electron added.
+Sinks are: cavitysink
+Sources are:
+ mybeam
+
+ Position generator named beamemit set.
+ Velocity generator named  set.
+In position generatorbeamemit the nomMacroPtclsPerAreaStep is computed to be 4166.67, for species, electron.
+Particle source beamemit will emit particles.
+NOTICE: No mask specified, emitting from entire slab emitSurface specified in position generator 
+NOTICE: For position generator, beamemit, ptclsPerCell not specified.  Taking from owning species.
+currentDensityFunc not found in xvLoaderEmitter mybeam, assuming a constant value of currentDensity =1332.65
+relMacroDenFunc not found in xvLoaderEmitter mybeam, assuming constant value of 1.
+relMacroFluxFunc found and set in xvLoaderEmitter mybeam
+MultiFields built.
+Building species electron with NDIM = 2.
+Added sink, cavitysink, to grid boundary bwoconductor.
+Sources (for buildSolvers) are:
+ mybeam
+
+Source named mybeam added to Species electron.
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+Source, mybeam, loaded 0 particles on this processor (rank 0)
+Domain: electron initialized.
+Domain: All species initialized.
+Domain: All emfluids initialized.
+Domain: All collisions initialized.
+Domain: All ionization processes initialized.
+Domain: All impactCollision processes initialized.
+All semiconductor materials initialized.
+All monteCarloHandlers initialized.
+Initializing 'rho' with 0 setters.
+Initializing 'edgeE' with 0 setters.
+Initializing 'faceB' with 0 setters.
+Initializing 'edgeJ' with 0 setters.
+Initializing 'J' with 0 setters.
+Initializing 'nodalE' with 0 setters.
+Initializing 'nodalB' with 0 setters.
+Domain: All MultiFields initialized at clock tim 2020-01-26-11:09:55.542.
+Domain: All emfields initialized at clock time 2020-01-26-11:09:55.542.
+Domain: Histories initialized at clock time 2020-01-26-11:09:55.542.
+Domain: Initialization complete at clock time 2020-01-26-11:09:55.542.
+
+Domain: Starting dump 0 at time step 0 and clock, 2020-01-26-11:09:55.542.
+Globals dumped at 2020-01-26-11:09:55.554.
+Dumping grid boundaries at 2020-01-26-11:09:55.555.
+Dumping universe at clock time 2020-01-26-11:09:55.555.
+universe dumped  at clock time 2020-01-26-11:09:55.565.
+Dumping bwoconductor at clock time 2020-01-26-11:09:55.565.
+bwoconductor dumped  at clock time 2020-01-26-11:09:55.574.
+Dumping bwoabsorber at clock time 2020-01-26-11:09:55.574.
+bwoabsorber dumped  at clock time 2020-01-26-11:09:55.584.
+Dumped grid boundaries at 2020-01-26-11:09:55.584.
+Domain: Sorting electron.
+Domain: electron sorted.
+Dumping species data electron.
+No fluids to dump.
+Domain: Dumping histories at 2020-01-26-11:09:55.587.
+Domain: Histories dumped at 2020-01-26-11:09:55.587.
+No SumRhoJ to dump.
+Dumping all multiFields at 2020-01-26-11:09:55.587.
+Dumping rho at 2020-01-26-11:09:55.587.
+Dumped rho at 2020-01-26-11:09:55.595.
+Dumping edgeE at 2020-01-26-11:09:55.595.
+Dumped edgeE at 2020-01-26-11:09:55.602.
+Dumping faceB at 2020-01-26-11:09:55.602.
+Dumped faceB at 2020-01-26-11:09:55.609.
+Dumping edgeJ at 2020-01-26-11:09:55.609.
+Dumped edgeJ at 2020-01-26-11:09:55.619.
+Dumping J at 2020-01-26-11:09:55.619.
+Dumped J at 2020-01-26-11:09:55.626.
+All multiFields dumped at 2020-01-26-11:09:55.630.
+No electromagnetic fields to dump.
+No collisions to dump.
+No ionization processes to dump.
+Domain: Dump 0 completed at 2020-01-26-11:09:55.631.
+
+Main loop started    at clock time 2020-01-26-11:09:55.631.
+Taking step        1 to t =  6.440502e-12 at 2020-01-26-11:09:55.631.
+Rank 0 processed a total of 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Sorting particles
+Sorting time: 0.0000000 per particle, 0.0000000 total
+Rank 0 processed a total of 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 0.0000000 electron at an average of 0.0000000 seconds per particle push.
+Taking step        2 to t =  1.288100e-11 at 2020-01-26-11:09:55.652.
+Rank 0 processed a total of 959.0000 electron at an average of 0.0000000 seconds per particle push.
+Rank 0 just processed 959.0000 electron at an average of 0.0000000 seconds per particle push.
+For all ranks, total average particle process time = 0.0000000 seconds.
+For all ranks, last average particle process time = 0.0000000 seconds.
+Taking step        3 to t =  1.932151e-11 at 2020-01-26-11:09:55.665.
+Taking step        4 to t =  2.576201e-11 at 2020-01-26-11:09:55.680.
+Taking step        5 to t =  3.220251e-11 at 2020-01-26-11:09:55.701.
+Taking step        6 to t =  3.864301e-11 at 2020-01-26-11:09:55.724.
+Taking step        7 to t =  4.508352e-11 at 2020-01-26-11:09:55.746.
+Taking step        8 to t =  5.152402e-11 at 2020-01-26-11:09:55.767.
+Taking step        9 to t =  5.796452e-11 at 2020-01-26-11:09:55.797.
+Taking step       10 to t =  6.440502e-11 at 2020-01-26-11:09:55.824.
+Taking step       11 to t =  7.084553e-11 at 2020-01-26-11:09:55.852.
+Taking step       12 to t =  7.728603e-11 at 2020-01-26-11:09:55.888.
+Taking step       13 to t =  8.372653e-11 at 2020-01-26-11:09:55.958.
+Taking step       14 to t =  9.016703e-11 at 2020-01-26-11:09:55.997.
+Taking step       15 to t =  9.660754e-11 at 2020-01-26-11:09:56.030.
+Taking step       16 to t =  1.030480e-10 at 2020-01-26-11:09:56.063.
+Taking step       17 to t =  1.094885e-10 at 2020-01-26-11:09:56.099.
+Taking step       18 to t =  1.159290e-10 at 2020-01-26-11:09:56.145.
+Taking step       19 to t =  1.223695e-10 at 2020-01-26-11:09:56.196.
+Taking step       20 to t =  1.288100e-10 at 2020-01-26-11:09:56.236.
+Taking step       21 to t =  1.352506e-10 at 2020-01-26-11:09:56.292.
+Taking step       22 to t =  1.416911e-10 at 2020-01-26-11:09:56.374.
+Taking step       23 to t =  1.481316e-10 at 2020-01-26-11:09:56.421.
+Taking step       24 to t =  1.545721e-10 at 2020-01-26-11:09:56.469.
+Taking step       25 to t =  1.610126e-10 at 2020-01-26-11:09:56.543.
+Taking step       26 to t =  1.674531e-10 at 2020-01-26-11:09:56.611.
+Taking step       27 to t =  1.738936e-10 at 2020-01-26-11:09:56.713.
+Taking step       28 to t =  1.803341e-10 at 2020-01-26-11:09:56.794.
+Taking step       29 to t =  1.867746e-10 at 2020-01-26-11:09:56.884.
+Taking step       30 to t =  1.932151e-10 at 2020-01-26-11:09:56.983.
+Taking step       31 to t =  1.996556e-10 at 2020-01-26-11:09:57.060.
+Taking step       32 to t =  2.060961e-10 at 2020-01-26-11:09:57.123.
+Taking step       33 to t =  2.125366e-10 at 2020-01-26-11:09:57.191.
+Taking step       34 to t =  2.189771e-10 at 2020-01-26-11:09:57.296.
+Taking step       35 to t =  2.254176e-10 at 2020-01-26-11:09:57.390.
+Taking step       36 to t =  2.318581e-10 at 2020-01-26-11:09:57.466.
+Taking step       37 to t =  2.382986e-10 at 2020-01-26-11:09:57.585.
+Taking step       38 to t =  2.447391e-10 at 2020-01-26-11:09:57.707.
+Taking step       39 to t =  2.511796e-10 at 2020-01-26-11:09:57.788.
+Taking step       40 to t =  2.576201e-10 at 2020-01-26-11:09:57.886.
+Taking step       41 to t =  2.640606e-10 at 2020-01-26-11:09:57.994.
+Taking step       42 to t =  2.705011e-10 at 2020-01-26-11:09:58.102.
+Taking step       43 to t =  2.769416e-10 at 2020-01-26-11:09:58.225.
+Taking step       44 to t =  2.833821e-10 at 2020-01-26-11:09:58.342.
+Taking step       45 to t =  2.898226e-10 at 2020-01-26-11:09:58.447.
+Taking step       46 to t =  2.962631e-10 at 2020-01-26-11:09:58.562.
+Taking step       47 to t =  3.027036e-10 at 2020-01-26-11:09:58.695.
+Taking step       48 to t =  3.091441e-10 at 2020-01-26-11:09:58.846.
+Taking step       49 to t =  3.155846e-10 at 2020-01-26-11:09:58.976.
+Taking step       50 to t =  3.220251e-10 at 2020-01-26-11:09:59.079.
+Taking step       51 to t =  3.284656e-10 at 2020-01-26-11:09:59.250.
+Taking step       52 to t =  3.349061e-10 at 2020-01-26-11:09:59.409.
+Taking step       53 to t =  3.413466e-10 at 2020-01-26-11:09:59.518.
+Taking step       54 to t =  3.477871e-10 at 2020-01-26-11:09:59.692.
+Taking step       55 to t =  3.542276e-10 at 2020-01-26-11:09:59.892.
+Taking step       56 to t =  3.606681e-10 at 2020-01-26-11:10:00.038.
+Taking step       57 to t =  3.671086e-10 at 2020-01-26-11:10:00.165.
+Taking step       58 to t =  3.735491e-10 at 2020-01-26-11:10:00.320.
+Taking step       59 to t =  3.799896e-10 at 2020-01-26-11:10:00.467.
+Taking step       60 to t =  3.864301e-10 at 2020-01-26-11:10:00.656.
+Taking step       61 to t =  3.928706e-10 at 2020-01-26-11:10:00.774.
+Taking step       62 to t =  3.993111e-10 at 2020-01-26-11:10:00.932.
+Taking step       63 to t =  4.057517e-10 at 2020-01-26-11:10:01.130.
+Taking step       64 to t =  4.121922e-10 at 2020-01-26-11:10:01.313.
+Taking step       65 to t =  4.186327e-10 at 2020-01-26-11:10:01.473.
+Taking step       66 to t =  4.250732e-10 at 2020-01-26-11:10:01.645.
+Taking step       67 to t =  4.315137e-10 at 2020-01-26-11:10:01.788.
+Taking step       68 to t =  4.379542e-10 at 2020-01-26-11:10:01.963.
+Taking step       69 to t =  4.443947e-10 at 2020-01-26-11:10:02.129.
+Taking step       70 to t =  4.508352e-10 at 2020-01-26-11:10:02.322.
+Taking step       71 to t =  4.572757e-10 at 2020-01-26-11:10:02.463.
+Taking step       72 to t =  4.637162e-10 at 2020-01-26-11:10:02.643.
+Taking step       73 to t =  4.701567e-10 at 2020-01-26-11:10:02.807.
+Taking step       74 to t =  4.765972e-10 at 2020-01-26-11:10:02.970.
+Taking step       75 to t =  4.830377e-10 at 2020-01-26-11:10:03.134.
+Taking step       76 to t =  4.894782e-10 at 2020-01-26-11:10:03.322.
+Taking step       77 to t =  4.959187e-10 at 2020-01-26-11:10:03.517.
+Taking step       78 to t =  5.023592e-10 at 2020-01-26-11:10:03.689.
+Taking step       79 to t =  5.087997e-10 at 2020-01-26-11:10:03.850.
+Taking step       80 to t =  5.152402e-10 at 2020-01-26-11:10:04.038.
+Taking step       81 to t =  5.216807e-10 at 2020-01-26-11:10:04.223.
+Taking step       82 to t =  5.281212e-10 at 2020-01-26-11:10:04.384.
+Taking step       83 to t =  5.345617e-10 at 2020-01-26-11:10:04.614.
+Taking step       84 to t =  5.410022e-10 at 2020-01-26-11:10:04.833.
+Taking step       85 to t =  5.474427e-10 at 2020-01-26-11:10:05.026.
+Taking step       86 to t =  5.538832e-10 at 2020-01-26-11:10:05.229.
+Taking step       87 to t =  5.603237e-10 at 2020-01-26-11:10:05.467.
+Taking step       88 to t =  5.667642e-10 at 2020-01-26-11:10:05.692.
+Taking step       89 to t =  5.732047e-10 at 2020-01-26-11:10:05.886.
+Taking step       90 to t =  5.796452e-10 at 2020-01-26-11:10:06.095.
+Taking step       91 to t =  5.860857e-10 at 2020-01-26-11:10:06.297.
+Taking step       92 to t =  5.925262e-10 at 2020-01-26-11:10:06.587.
+Taking step       93 to t =  5.989667e-10 at 2020-01-26-11:10:06.836.
+Taking step       94 to t =  6.054072e-10 at 2020-01-26-11:10:07.058.
+Taking step       95 to t =  6.118477e-10 at 2020-01-26-11:10:07.294.
+Taking step       96 to t =  6.182882e-10 at 2020-01-26-11:10:07.572.
+Taking step       97 to t =  6.247287e-10 at 2020-01-26-11:10:07.828.
+Taking step       98 to t =  6.311692e-10 at 2020-01-26-11:10:08.099.
+Taking step       99 to t =  6.376097e-10 at 2020-01-26-11:10:08.331.
+Taking step      100 to t =  6.440502e-10 at 2020-01-26-11:10:08.552.
+Taking step      101 to t =  6.504907e-10 at 2020-01-26-11:10:08.808.
+Taking step      102 to t =  6.569312e-10 at 2020-01-26-11:10:09.071.
+Taking step      103 to t =  6.633717e-10 at 2020-01-26-11:10:09.284.
+Taking step      104 to t =  6.698122e-10 at 2020-01-26-11:10:09.520.
+Taking step      105 to t =  6.762528e-10 at 2020-01-26-11:10:09.762.
+Taking step      106 to t =  6.826933e-10 at 2020-01-26-11:10:09.980.
+Taking step      107 to t =  6.891338e-10 at 2020-01-26-11:10:10.245.
+Taking step      108 to t =  6.955743e-10 at 2020-01-26-11:10:10.493.
+Taking step      109 to t =  7.020148e-10 at 2020-01-26-11:10:10.778.
+Taking step      110 to t =  7.084553e-10 at 2020-01-26-11:10:11.082.
+Taking step      111 to t =  7.148958e-10 at 2020-01-26-11:10:11.374.
+--------------------- END ENGINE OUTPUT ----------------
+ 
+Notices:
+
+NOTICE: No mask specified, emitting from entire slab emitSurface specified in position generator 
+
+NOTICE: For position generator, beamemit, ptclsPerCell not specified.  Taking from owning species.
+
+
+Warnings:
+
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+
+WARNING: In , species as a string has been deprecated. species must be a non-empty vector of strings.
+
+
+Engine completed with error: Process was stopped at user request.
